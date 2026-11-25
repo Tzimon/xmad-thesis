@@ -1,0 +1,99 @@
+{
+  "run_id": "P4-2WK-013",
+  "label": "mistral-small4-119b__mistral-small4-119b",
+  "benchmark": "2wiki",
+  "agent_a": "mistral-small4-119b",
+  "agent_b": "mistral-small4-119b",
+  "homogeneous": true,
+  "questions": 30,
+  "complete": true,
+  "judge_pending": 1,
+  "exact_match": 0.8,
+  "f1": 0.8,
+  "exact_match_consensus_only": 0.8276,
+  "source_counts": {
+    "consensus": 29,
+    "pending_judge": 1
+  },
+  "consensus_rate": 0.9667,
+  "judge_rate": 0.0333,
+  "stop_reason_counts": {
+    "consensus": 29,
+    "stalemate": 1
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.8333,
+    "agent_b": 0.8333
+  },
+  "evidence_jaccard_round1": 0.9344,
+  "evidence_recall": {
+    "agent_a_round1": 0.9917,
+    "agent_b_round1": 1.0,
+    "union_round1": 1.0,
+    "all_rounds": 1.0
+  },
+  "rounds_mean": 1.133,
+  "wall_time_s": {
+    "mean": 2.707,
+    "p50": 1.893,
+    "p90": 6.006,
+    "p99": 7.852,
+    "total": 81.2
+  },
+  "tokens": {
+    "agent_a": 225062,
+    "agent_b": 211094
+  },
+  "tokens_split": {
+    "a_prompt": 218081,
+    "a_completion": 6981,
+    "b_prompt": 204166,
+    "b_completion": 6928
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 4,
+    "agent_b": 2
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0,
+      1
+    ],
+    "gpus_agent_b": [
+      0,
+      1
+    ],
+    "agent_a_wh": 11.75,
+    "agent_b_wh": 0.0,
+    "total_wh": 11.75,
+    "per_gpu": {
+      "0": {
+        "wh": 6.07,
+        "vram_peak_mib": 130612
+      },
+      "1": {
+        "wh": 5.68,
+        "vram_peak_mib": 128315
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.00081,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-25T05:57:55"
+}

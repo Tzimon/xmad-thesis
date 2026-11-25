@@ -1,0 +1,62 @@
+# xmad/4_iteration/config/base.yaml
+#
+# The fixed conditions of every Phase 4 run. Identical to Phase 3
+# (3_iteration/config/base.yaml) except for the `benchmarks` block, which
+# replaces the single `dataset` entry. phase4.py combines this file with
+# models.yaml and one entry of runs.yaml and writes the result as run.yaml into
+# the run's folder -- so every folder documents exactly what was run.
+# Change conditions HERE, never per run.
+
+# One entry per benchmark (C3.3). `name` selects the adapter in xmad_bench/,
+# `config` and `split` are passed to it. A new benchmark = one adapter + one
+# entry here; agent and debate code stay unchanged.
+benchmarks:
+  hotpotqa:                  # Phase 2/3 benchmark, kept for regression tests and comparison
+    name: "hotpotqa"
+    config: "distractor"     # Hugging Face hotpotqa/hotpot_qa, as in Phase 3
+    split: "validation"
+  musique:
+    name: "musique"
+    config: "answerable"     # MuSiQue-Ans only (no unanswerable questions, so EM/F1 stay the metric)
+    split: "dev"             # data/musique/musique_ans_v1.0_dev.jsonl (download_benchmarks.py)
+  2wiki:
+    name: "2wiki"
+    config: "april7"         # data_ids_april7.zip (fixed sentence segmentation, see README)
+    split: "dev"             # data/2wiki/dev.json (download_benchmarks.py)
+# sample size and seed: runs.yaml -> sample (1000 questions per benchmark, seed 42)
+
+decoding:                    # ONE block for both agents (C1.6) -- unchanged from Phase 3
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+
+debate:                      # unchanged from Phase 3
+  max_rounds: 10
+  force_first_search: true   # first turn of round 1 must search
+  stalemate_patience: 1
+
+turns_per_round:             # tool-call turn budget per agent and round -- unchanged
+  default: 6
+  no_parallel_tool_calls: 12
+
+tools:
+  agent_tools: ["search_knowledge_base"]   # unchanged: one search tool (k = 3 passages per call)
+
+debate_system_prompt_file: "prompts/debate_system_prompt.txt"   # unchanged from Phase 2/3
+
+judge:                       # separate pass after the debates: python phase4.py judge -- unchanged
+  model_key: "deepseek-v4-flash"
+  prompt_file: "prompts/judge_system_prompt.txt"
+  decoding:
+    temperature: 0.0
+    top_p: 1.0
+    max_tokens: 16384
+  parallel_requests: 16
+
+serving:                     # as Phase 3 except ready_timeout_s
+  max_model_len: 32768
+  gpu_memory_utilization: 0.88
+  vllm_seed: 0
+  ready_timeout_s: 3600       # Phase 3: 2400. Raised 2026-10-24: Qwen3.5-397B needed 2380 s in the Phase 4 smoke test
+                             # (first attempt timed out during kernel warm-up). Start-up time only, no effect on results.
+  port_base: 8000

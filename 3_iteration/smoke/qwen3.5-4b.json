@@ -1,0 +1,42 @@
+{
+  "model": "qwen3.5-4b",
+  "hf_id": "Qwen/Qwen3.5-4B",
+  "ok": true,
+  "tool_call_parser": "qwen3_coder",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-05T15:22:49",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_coder",
+      "server_started": true,
+      "load_s": 270.1,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 3}",
+          "{\"query\": \"Ed Wood nationality\", \"k\": 3}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: The search results explicitly state that both Scott Derrickson and Ed Wood are American. Since they share the same nationality, the answer is yes.",
+          "Final answer: yes"
+        ],
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 91,
+        "finish_reason": "stop",
+        "made_another_tool_call": false
+      }
+    }
+  ]
+}

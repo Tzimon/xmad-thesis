@@ -1,0 +1,21 @@
+{
+  "benchmark": "2wiki",
+  "repository": "https://github.com/Alab-NII/2wikimultihop",
+  "download": "https://www.dropbox.com/s/ms2m13252h6xubs/data_ids_april7.zip?dl=1",
+  "archive": "data_ids_april7.zip",
+  "archive_sha256": "95df2bf56fdabe034e27aebc580e02264232203cf52552f9efe8a919e5529eef",
+  "license": "Apache-2.0 (repository license; no separate data license stated)",
+  "downloaded": "2026-10-23T08:59:22",
+  "files": {
+    "dev.json": {
+      "from_archive_path": "dev.json",
+      "sha256": "79f77ae104088ea8e25b1a65dbece768d45771194663bc5660ec9a98070dadf5",
+      "questions": 12576
+    },
+    "train.json": {
+      "from_archive_path": "train.json",
+      "sha256": "b318dbafbfed51a8029718fa59be8b616600cbff675a3b587694b28c5eedfc13",
+      "questions": 167454
+    }
+  }
+}

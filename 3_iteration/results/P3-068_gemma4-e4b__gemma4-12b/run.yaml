@@ -1,0 +1,47 @@
+# written by phase3.py at 2026-10-07T15:12:31 -- exact configuration of this run
+run:
+  run_id: P3-068
+  label: gemma4-e4b__gemma4-12b
+  n_questions: 1000
+  seed: 42
+dataset:
+  name: hotpotqa/hotpot_qa
+  config: distractor
+  split: validation
+agents:
+  agent_a:
+    model_key: gemma4-e4b
+    alias: gemma4-e4b
+    url: http://127.0.0.1:8010/v1
+    gpus:
+    - 6
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+  agent_b:
+    model_key: gemma4-12b
+    alias: gemma4-12b
+    url: http://127.0.0.1:8011/v1
+    gpus:
+    - 7
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+debate:
+  max_rounds: 10
+  force_first_search: true
+  stalemate_patience: 1
+tools:
+  mcp_url: http://127.0.0.1:8015/mcp
+  agent_tools:
+  - search_knowledge_base
+debate_system_prompt_file: prompts/debate_system_prompt.txt
+block: D_size_gemma
+priority: should
+replicate: 1

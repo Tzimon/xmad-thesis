@@ -1,0 +1,47 @@
+# written by phase3.py at 2026-10-08T10:29:08 -- exact configuration of this run
+run:
+  run_id: P3-078
+  label: qwen3.5-4b__nemotron3-nano-4b
+  n_questions: 1000
+  seed: 42
+dataset:
+  name: hotpotqa/hotpot_qa
+  config: distractor
+  split: validation
+agents:
+  agent_a:
+    model_key: qwen3.5-4b
+    alias: qwen3.5-4b
+    url: http://127.0.0.1:8010/v1
+    gpus:
+    - 2
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+  agent_b:
+    model_key: nemotron3-nano-4b
+    alias: nemotron3-nano-4b
+    url: http://127.0.0.1:8011/v1
+    gpus:
+    - 3
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+debate:
+  max_rounds: 10
+  force_first_search: true
+  stalemate_patience: 1
+tools:
+  mcp_url: http://127.0.0.1:8015/mcp
+  agent_tools:
+  - search_knowledge_base
+debate_system_prompt_file: prompts/debate_system_prompt.txt
+block: C_cross_vendor_S
+priority: could
+replicate: 1

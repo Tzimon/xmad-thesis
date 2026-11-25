@@ -1,0 +1,106 @@
+{
+  "run_id": "P4-MSQ-029",
+  "label": "muse-glimmer-30b__gemma4-26b-a4b",
+  "benchmark": "musique",
+  "agent_a": "muse-glimmer-30b",
+  "agent_b": "gemma4-26b-a4b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.501,
+  "f1": 0.6086,
+  "exact_match_consensus_only": 0.5638,
+  "source_counts": {
+    "consensus": 846,
+    "judge": 154
+  },
+  "consensus_rate": 0.846,
+  "judge_rate": 0.154,
+  "stop_reason_counts": {
+    "consensus": 846,
+    "stalemate": 154
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.524,
+    "agent_b": 0.419
+  },
+  "evidence_jaccard_round1": 0.6775,
+  "evidence_recall": {
+    "agent_a_round1": 0.9311,
+    "agent_b_round1": 0.8565,
+    "union_round1": 0.9508,
+    "all_rounds": 0.9618
+  },
+  "rounds_mean": 1.597,
+  "wall_time_s": {
+    "mean": 36.949,
+    "p50": 29.542,
+    "p90": 74.367,
+    "p99": 138.413,
+    "total": 36949.1
+  },
+  "tokens": {
+    "agent_a": 24491411,
+    "agent_b": 10946173
+  },
+  "tokens_split": {
+    "a_prompt": 22412602,
+    "a_completion": 2078809,
+    "b_prompt": 9628159,
+    "b_completion": 1318014
+  },
+  "truncated_replies": {
+    "agent_a": 1,
+    "agent_b": 74
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 499,
+    "agent_b": 370
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1
+    ],
+    "agent_a_wh": 3801.48,
+    "agent_b_wh": 1243.39,
+    "total_wh": 5044.87,
+    "per_gpu": {
+      "0": {
+        "wh": 3801.48,
+        "vram_peak_mib": 130307
+      },
+      "1": {
+        "wh": 1243.39,
+        "vram_peak_mib": 126763
+      },
+      "6": {
+        "wh": 264.64,
+        "vram_peak_mib": 129823
+      },
+      "7": {
+        "wh": 98.62,
+        "vram_peak_mib": 126123
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.3481,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:09:16",
+  "judge_model": "deepseek-v4-flash"
+}

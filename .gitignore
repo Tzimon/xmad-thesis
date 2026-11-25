@@ -1,0 +1,63 @@
+# --- Python and virtual environments -------------------------------------------
+# (the cluster venvs live outside the repo, these lines are only a safeguard)
+venv/
+venvs/
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- secrets and local settings --------------------------------------------------
+.env
+.env.*
+*.pem
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- caches, PID files, logs -----------------------------------------------------
+.cache/
+*/pids/
+*.pid
+**/logs/*.json
+**/logs/**/*.json
+*.log
+*.out
+
+# --- Phase 3 (3_iteration) ---------------------------------------------------
+# versioned: results/OVERVIEW.md, results/overview.csv and per run run.yaml,
+# status.json, summary.json, debate_results.csv; smoke/*.json + SMOKE_RESULTS.md
+3_iteration/results/*/sessions/
+3_iteration/results/*/server_logs/
+3_iteration/results/*/gpu_metrics_*.csv
+3_iteration/results/*_test/
+3_iteration/**/*.tmp
+!3_iteration/results/*/summary.json
+!3_iteration/results/*/status.json
+!3_iteration/smoke/*.json
+3_iteration/STOP
+3_iteration/.resubmit_count
+3_iteration/results_old/
+3_iteration/pretest_sanity.txt
+
+# --- Phase 4 (4_iteration) ---------------------------------------------------
+4_iteration/data/*/*.zip
+4_iteration/data/*/*.json*
+!4_iteration/data/*/SOURCE.json
+4_iteration/results/*/sessions/
+4_iteration/results/*/server_logs/
+4_iteration/results/*/gpu_metrics_*.csv
+4_iteration/results/*_test/*
+!4_iteration/results/*_test/summary.json
+!4_iteration/results/*_test/status.json
+!4_iteration/results/*_test/debate_results.csv
+!4_iteration/results/*_test/run.yaml
+4_iteration/**/*.tmp
+!4_iteration/results/*/summary.json
+!4_iteration/results/*/status.json
+!4_iteration/smoke/*.json
+4_iteration/STOP
+4_iteration/.resubmit_count

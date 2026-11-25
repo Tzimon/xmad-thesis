@@ -1,0 +1,16 @@
+benchmark,k,recall,n
+hotpotqa,1,0.4,50
+hotpotqa,2,0.61,50
+hotpotqa,3,0.73,50
+hotpotqa,5,0.84,50
+hotpotqa,10,1.0,50
+musique,1,0.265,50
+musique,2,0.377,50
+musique,3,0.443,50
+musique,5,0.552,50
+musique,10,0.693,50
+2wiki,1,0.385,50
+2wiki,2,0.6,50
+2wiki,3,0.69,50
+2wiki,5,0.795,50
+2wiki,10,1.0,50

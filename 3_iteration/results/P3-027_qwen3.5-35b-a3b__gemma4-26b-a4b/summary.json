@@ -1,0 +1,85 @@
+{
+  "run_id": "P3-027",
+  "label": "qwen3.5-35b-a3b__gemma4-26b-a4b",
+  "agent_a": "qwen3.5-35b-a3b",
+  "agent_b": "gemma4-26b-a4b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.631,
+  "f1": 0.7855,
+  "exact_match_consensus_only": 0.661,
+  "source_counts": {
+    "consensus": 935,
+    "judge": 65
+  },
+  "consensus_rate": 0.935,
+  "judge_rate": 0.065,
+  "stop_reason_counts": {
+    "consensus": 935,
+    "stalemate": 65
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.613,
+    "agent_b": 0.61
+  },
+  "evidence_jaccard_round1": 0.7104,
+  "rounds_mean": 1.235,
+  "wall_time_s": {
+    "mean": 3.038,
+    "p50": 0.962,
+    "p90": 3.946,
+    "p99": 51.456,
+    "total": 3038.2
+  },
+  "tokens": {
+    "agent_a": 5074462,
+    "agent_b": 3437265
+  },
+  "truncated_replies": {
+    "agent_a": 9,
+    "agent_b": 18
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 57,
+    "agent_b": 28
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      2
+    ],
+    "gpus_agent_b": [
+      3
+    ],
+    "agent_a_wh": 247.57,
+    "agent_b_wh": 300.6,
+    "total_wh": 548.17,
+    "per_gpu": {
+      "2": {
+        "wh": 60.19,
+        "vram_peak_mib": 129095
+      },
+      "3": {
+        "wh": 71.94,
+        "vram_peak_mib": 126683
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.03782,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run; repaired run: re-run part measured + kept share of the first attempt (estimate)"
+  },
+  "updated": "2026-10-08T08:36:11",
+  "judge_model": "deepseek-v4-flash"
+}

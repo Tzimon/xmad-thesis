@@ -1,0 +1,17 @@
+[project]
+name = "xmad-rag"
+version = "0.1.0"
+description = "X-MAD Phase 1: retrieval + shared MCP tool pool"
+requires-python = ">=3.11"
+# Dependencies are intentionally NOT listed here: they already live in the
+# cluster environment (torch, transformers, datasets, fastmcp) and are pinned
+# for vLLM. Keeping this empty means `pip install -e .` cannot resolve or
+# upgrade anything and therefore cannot break the vLLM stack.
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["xmad_rag*"]

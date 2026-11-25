@@ -1,0 +1,103 @@
+{
+  "run_id": "P4-2WK-050",
+  "label": "qwen3.5-35b-a3b__qwen3.5-122b-a10b",
+  "benchmark": "2wiki",
+  "agent_a": "qwen3.5-35b-a3b",
+  "agent_b": "qwen3.5-122b-a10b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.724,
+  "f1": 0.8027,
+  "exact_match_consensus_only": 0.7453,
+  "source_counts": {
+    "consensus": 954,
+    "judge": 46
+  },
+  "consensus_rate": 0.954,
+  "judge_rate": 0.046,
+  "stop_reason_counts": {
+    "consensus": 954,
+    "stalemate": 46
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.729,
+    "agent_b": 0.724
+  },
+  "evidence_jaccard_round1": 0.8958,
+  "evidence_recall": {
+    "agent_a_round1": 0.9928,
+    "agent_b_round1": 0.996,
+    "union_round1": 0.9975,
+    "all_rounds": 0.998
+  },
+  "rounds_mean": 1.155,
+  "wall_time_s": {
+    "mean": 3.224,
+    "p50": 1.718,
+    "p90": 5.583,
+    "p99": 40.199,
+    "total": 3223.9
+  },
+  "tokens": {
+    "agent_a": 5825140,
+    "agent_b": 8251379
+  },
+  "tokens_split": {
+    "a_prompt": 5464671,
+    "a_completion": 360469,
+    "b_prompt": 7827783,
+    "b_completion": 423596
+  },
+  "truncated_replies": {
+    "agent_a": 8,
+    "agent_b": 5
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 117,
+    "agent_b": 252
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      5
+    ],
+    "gpus_agent_b": [
+      6,
+      7
+    ],
+    "agent_a_wh": 200.15,
+    "agent_b_wh": 487.87,
+    "total_wh": 688.02,
+    "per_gpu": {
+      "5": {
+        "wh": 200.15,
+        "vram_peak_mib": 128747
+      },
+      "6": {
+        "wh": 239.93,
+        "vram_peak_mib": 128931
+      },
+      "7": {
+        "wh": 247.94,
+        "vram_peak_mib": 128931
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.04747,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T06:47:52",
+  "judge_model": "deepseek-v4-flash"
+}

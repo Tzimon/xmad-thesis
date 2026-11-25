@@ -1,0 +1,91 @@
+{
+  "run_id": "P4-MSQ-014",
+  "label": "nemotron3-nano-4b__nemotron3-nano-4b",
+  "benchmark": "musique",
+  "agent_a": "nemotron3-nano-4b",
+  "agent_b": "nemotron3-nano-4b",
+  "homogeneous": true,
+  "questions": 30,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.1667,
+  "f1": 0.2272,
+  "exact_match_consensus_only": 0.1667,
+  "source_counts": {
+    "consensus": 30
+  },
+  "consensus_rate": 1.0,
+  "judge_rate": 0.0,
+  "stop_reason_counts": {
+    "consensus": 30
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.1667,
+    "agent_b": 0.1667
+  },
+  "evidence_jaccard_round1": 1.0,
+  "evidence_recall": {
+    "agent_a_round1": 0.675,
+    "agent_b_round1": 0.675,
+    "union_round1": 0.675,
+    "all_rounds": 0.675
+  },
+  "rounds_mean": 1.0,
+  "wall_time_s": {
+    "mean": 2.621,
+    "p50": 2.018,
+    "p90": 2.85,
+    "p99": 13.68,
+    "total": 78.6
+  },
+  "tokens": {
+    "agent_a": 105529,
+    "agent_b": 105498
+  },
+  "tokens_split": {
+    "a_prompt": 100656,
+    "a_completion": 4873,
+    "b_prompt": 100656,
+    "b_completion": 4842
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      1
+    ],
+    "gpus_agent_b": [
+      1
+    ],
+    "agent_a_wh": 4.02,
+    "agent_b_wh": 0.0,
+    "total_wh": 4.02,
+    "per_gpu": {
+      "1": {
+        "wh": 4.02,
+        "vram_peak_mib": 128107
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.00028,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-24T15:22:51"
+}

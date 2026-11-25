@@ -1,0 +1,98 @@
+{
+  "run_id": "P4-MSQ-014",
+  "label": "nemotron3-nano-4b__nemotron3-nano-4b",
+  "benchmark": "musique",
+  "agent_a": "nemotron3-nano-4b",
+  "agent_b": "nemotron3-nano-4b",
+  "homogeneous": true,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.194,
+  "f1": 0.2546,
+  "exact_match_consensus_only": 0.1964,
+  "source_counts": {
+    "consensus": 988,
+    "judge": 11,
+    "error": 1
+  },
+  "consensus_rate": 0.988,
+  "judge_rate": 0.011,
+  "stop_reason_counts": {
+    "consensus": 988,
+    "stalemate": 11,
+    "error": 1
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.194,
+    "agent_b": 0.194
+  },
+  "evidence_jaccard_round1": 0.9935,
+  "evidence_recall": {
+    "agent_a_round1": 0.7203,
+    "agent_b_round1": 0.7201,
+    "union_round1": 0.7209,
+    "all_rounds": 0.7238
+  },
+  "rounds_mean": 1.084,
+  "wall_time_s": {
+    "mean": 0.723,
+    "p50": 0.615,
+    "p90": 0.895,
+    "p99": 1.639,
+    "total": 722.7
+  },
+  "tokens": {
+    "agent_a": 3749835,
+    "agent_b": 3760850
+  },
+  "tokens_split": {
+    "a_prompt": 3566576,
+    "a_completion": 183259,
+    "b_prompt": 3560971,
+    "b_completion": 199879
+  },
+  "truncated_replies": {
+    "agent_a": 1,
+    "agent_b": 3
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 1,
+    "agent_b": 1
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {
+    "BadRequestError": 1
+  },
+  "energy": {
+    "gpus_agent_a": [
+      1
+    ],
+    "gpus_agent_b": [
+      1
+    ],
+    "agent_a_wh": 89.62,
+    "agent_b_wh": 0.0,
+    "total_wh": 89.62,
+    "per_gpu": {
+      "1": {
+        "wh": 89.62,
+        "vram_peak_mib": 130479
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.00618,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T04:27:54",
+  "judge_model": "deepseek-v4-flash"
+}

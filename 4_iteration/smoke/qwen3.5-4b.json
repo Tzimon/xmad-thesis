@@ -1,0 +1,45 @@
+{
+  "model": "qwen3.5-4b",
+  "hf_id": "Qwen/Qwen3.5-4B",
+  "ok": true,
+  "tool_call_parser": "qwen3_coder",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-24T08:46:59",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_coder",
+      "server_started": true,
+      "load_s": 190.1,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 3}",
+          "{\"query\": \"Ed Wood nationality\", \"k\": 3}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: The search results explicitly state that both Scott Derrickson and Ed Wood are American. Since they share the same nationality, the answer is yes.",
+          "Final answer: yes"
+        ],
+        "extra_searches_before_answer": 0,
+        "extra_search_queries": [],
+        "last_content": "Wood was an American filmmaker, actor, writer, producer, and director. Therefore, they are of the same nationality.\n\nReasoning summary: The search results explicitly state that both Scott Derrickson and Ed Wood are American. Since they share the same nationality, the answer is yes.\nFinal answer: yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 91,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

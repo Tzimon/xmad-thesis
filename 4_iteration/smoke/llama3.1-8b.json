@@ -1,0 +1,47 @@
+{
+  "model": "llama3.1-8b",
+  "hf_id": "unsloth/Meta-Llama-3.1-8B-Instruct",
+  "ok": true,
+  "tool_call_parser": "llama3_json",
+  "supports_parallel_tool_calls": false,
+  "tested": "2026-10-24T09:28:55",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "llama3_json",
+      "server_started": true,
+      "load_s": 100.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson and Ed Wood nationality\", \"k\": \"3\"}"
+        ]
+      },
+      "T2_replay_error": "BadRequestError: Error code: 400 - {'error': {'message': 'This model only supports single tool-calls at once!', 'type': 'BadRequestError', 'param': None, 'code': 400}}",
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": false,
+        "supports_parallel_tool_calls": false
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: Both Scott Derrickson and Ed Wood are described as American in the retrieved passages, indicating they share the same nationality.",
+          "Final answer: yes"
+        ],
+        "extra_searches_before_answer": 1,
+        "extra_search_queries": [
+          "{\"query\": \"nationality of Scott Derrickson and Ed Wood\"}"
+        ],
+        "last_content": "Reasoning summary: Both Scott Derrickson and Ed Wood are described as American in the retrieved passages, indicating they share the same nationality.\nFinal answer: yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 32,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "run_id": "P4-MSQ-012",
+  "label": "ministral3-14b__ministral3-14b",
+  "benchmark": "musique",
+  "agent_a": "ministral3-14b",
+  "agent_b": "ministral3-14b",
+  "homogeneous": true,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.349,
+  "f1": 0.4407,
+  "exact_match_consensus_only": 0.3657,
+  "source_counts": {
+    "consensus": 938,
+    "judge": 62
+  },
+  "consensus_rate": 0.938,
+  "judge_rate": 0.062,
+  "stop_reason_counts": {
+    "consensus": 938,
+    "stalemate": 62
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.332,
+    "agent_b": 0.314
+  },
+  "evidence_jaccard_round1": 0.9438,
+  "evidence_recall": {
+    "agent_a_round1": 0.8339,
+    "agent_b_round1": 0.8336,
+    "union_round1": 0.8493,
+    "all_rounds": 0.8847
+  },
+  "rounds_mean": 1.48,
+  "wall_time_s": {
+    "mean": 3.82,
+    "p50": 2.729,
+    "p90": 7.967,
+    "p99": 15.14,
+    "total": 3820.4
+  },
+  "tokens": {
+    "agent_a": 10029094,
+    "agent_b": 10040610
+  },
+  "tokens_split": {
+    "a_prompt": 9544288,
+    "a_completion": 484806,
+    "b_prompt": 9547319,
+    "b_completion": 493291
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 1
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 318,
+    "agent_b": 305
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 6,
+    "agent_b": 16
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      1
+    ],
+    "gpus_agent_b": [
+      1
+    ],
+    "agent_a_wh": 467.41,
+    "agent_b_wh": 0.0,
+    "total_wh": 467.41,
+    "per_gpu": {
+      "1": {
+        "wh": 467.41,
+        "vram_peak_mib": 129925
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.03225,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T04:23:50",
+  "judge_model": "deepseek-v4-flash"
+}

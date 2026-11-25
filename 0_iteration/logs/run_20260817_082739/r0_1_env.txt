@@ -1,0 +1,5 @@
+python 3.11.7
+torch 2.8.0+cu128
+torch_cuda_build 12.8
+vllm 0.11.0
+import_ok True

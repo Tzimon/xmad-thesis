@@ -1,0 +1,98 @@
+{
+  "run_id": "P4-MSQ-054",
+  "label": "gemma4-e4b__gemma4-26b-a4b",
+  "benchmark": "musique",
+  "agent_a": "gemma4-e4b",
+  "agent_b": "gemma4-26b-a4b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.443,
+  "f1": 0.5559,
+  "exact_match_consensus_only": 0.519,
+  "source_counts": {
+    "consensus": 788,
+    "judge": 212
+  },
+  "consensus_rate": 0.788,
+  "judge_rate": 0.212,
+  "stop_reason_counts": {
+    "consensus": 788,
+    "stalemate": 212
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.377,
+    "agent_b": 0.41
+  },
+  "evidence_jaccard_round1": 0.6885,
+  "evidence_recall": {
+    "agent_a_round1": 0.8208,
+    "agent_b_round1": 0.8542,
+    "union_round1": 0.8989,
+    "all_rounds": 0.9198
+  },
+  "rounds_mean": 1.731,
+  "wall_time_s": {
+    "mean": 19.542,
+    "p50": 11.649,
+    "p90": 43.959,
+    "p99": 117.085,
+    "total": 19542.1
+  },
+  "tokens": {
+    "agent_a": 9051785,
+    "agent_b": 11988250
+  },
+  "tokens_split": {
+    "a_prompt": 7135054,
+    "a_completion": 1916731,
+    "b_prompt": 10446615,
+    "b_completion": 1541635
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 96
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 183,
+    "agent_b": 394
+  },
+  "no_answer_round1": {
+    "agent_a": 1,
+    "agent_b": 1
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      4
+    ],
+    "gpus_agent_b": [
+      5
+    ],
+    "agent_a_wh": 1263.08,
+    "agent_b_wh": 1040.4,
+    "total_wh": 2303.49,
+    "per_gpu": {
+      "4": {
+        "wh": 1263.08,
+        "vram_peak_mib": 129823
+      },
+      "5": {
+        "wh": 1040.4,
+        "vram_peak_mib": 126889
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.15894,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T06:28:26",
+  "judge_model": "deepseek-v4-flash"
+}

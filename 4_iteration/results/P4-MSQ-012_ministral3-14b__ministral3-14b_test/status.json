@@ -1,0 +1,31 @@
+{
+  "run_id": "P4-MSQ-012",
+  "state": "done",
+  "started": "2026-10-24T15:11:37",
+  "node": "gpu-node",
+  "slurm_job_id": "",
+  "gpus_agent_a": [
+    2
+  ],
+  "gpus_agent_b": [
+    2
+  ],
+  "ports": {
+    "a": 8020,
+    "b": 8021,
+    "mcp": 8025
+  },
+  "running_at_the_same_time": [
+    "P4-MSQ-002",
+    "P4-MSQ-004",
+    "P4-MSQ-005",
+    "P4-MSQ-006",
+    "P4-MSQ-010",
+    "P4-MSQ-011"
+  ],
+  "attempts": 1,
+  "message": "1 debates wait for the judge",
+  "models_ready_after_s": 570.4,
+  "finished": "2026-10-24T15:25:43",
+  "duration_min": 14.1
+}

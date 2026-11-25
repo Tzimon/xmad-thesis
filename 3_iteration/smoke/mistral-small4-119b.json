@@ -1,0 +1,43 @@
+{
+  "model": "mistral-small4-119b",
+  "hf_id": "mistralai/Mistral-Small-4-119B-2603",
+  "ok": true,
+  "tool_call_parser": "mistral",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-06T02:54:43",
+  "gpus": [
+    0,
+    1
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "mistral",
+      "server_started": true,
+      "load_s": 185.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 3}",
+          "{\"query\": \"Ed Wood nationality\", \"k\": 3}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: Both Scott Derrickson and Ed Wood are explicitly described as American in the retrieved passages, confirming they share the same nationality.",
+          "Final answer: yes"
+        ],
+        "extra_searches_before_answer": 2,
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 33,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "run_id": "P4-2WK-001",
+  "label": "qwen2.5-7b__qwen2.5-7b",
+  "benchmark": "2wiki",
+  "agent_a": "qwen2.5-7b",
+  "agent_b": "qwen2.5-7b",
+  "homogeneous": true,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.528,
+  "f1": 0.6036,
+  "exact_match_consensus_only": 0.5355,
+  "source_counts": {
+    "consensus": 973,
+    "judge": 26,
+    "error": 1
+  },
+  "consensus_rate": 0.973,
+  "judge_rate": 0.026,
+  "stop_reason_counts": {
+    "consensus": 973,
+    "stalemate": 26,
+    "error": 1
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.505,
+    "agent_b": 0.503
+  },
+  "evidence_jaccard_round1": 0.9905,
+  "evidence_recall": {
+    "agent_a_round1": 0.8985,
+    "agent_b_round1": 0.8992,
+    "union_round1": 0.9028,
+    "all_rounds": 0.9125
+  },
+  "rounds_mean": 1.133,
+  "wall_time_s": {
+    "mean": 1.384,
+    "p50": 0.929,
+    "p90": 1.926,
+    "p99": 6.525,
+    "total": 1383.9
+  },
+  "tokens": {
+    "agent_a": 3250727,
+    "agent_b": 3252787
+  },
+  "tokens_split": {
+    "a_prompt": 3017172,
+    "a_completion": 233555,
+    "b_prompt": 3019649,
+    "b_completion": 233138
+  },
+  "truncated_replies": {
+    "agent_a": 1,
+    "agent_b": 2
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 2,
+    "agent_b": 2
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 2,
+    "agent_b": 2
+  },
+  "errors": {
+    "BadRequestError": 1
+  },
+  "energy": {
+    "gpus_agent_a": [
+      4
+    ],
+    "gpus_agent_b": [
+      4
+    ],
+    "agent_a_wh": 182.19,
+    "agent_b_wh": 0.0,
+    "total_wh": 182.19,
+    "per_gpu": {
+      "4": {
+        "wh": 182.19,
+        "vram_peak_mib": 128891
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.01257,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:23:59",
+  "judge_model": "deepseek-v4-flash"
+}

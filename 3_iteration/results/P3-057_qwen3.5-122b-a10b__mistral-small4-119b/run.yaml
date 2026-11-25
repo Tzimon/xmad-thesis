@@ -1,0 +1,50 @@
+# written by phase3.py at 2026-10-07T16:20:51 -- exact configuration of this run
+run:
+  run_id: P3-057
+  label: qwen3.5-122b-a10b__mistral-small4-119b
+  n_questions: 1000
+  seed: 42
+dataset:
+  name: hotpotqa/hotpot_qa
+  config: distractor
+  split: validation
+agents:
+  agent_a:
+    model_key: qwen3.5-122b-a10b
+    alias: qwen3.5-122b-a10b
+    url: http://127.0.0.1:8000/v1
+    gpus:
+    - 0
+    - 1
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+  agent_b:
+    model_key: mistral-small4-119b
+    alias: mistral-small4-119b
+    url: http://127.0.0.1:8001/v1
+    gpus:
+    - 2
+    - 3
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body:
+      reasoning_effort: none
+    system_prompt_suffix: ''
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+debate:
+  max_rounds: 10
+  force_first_search: true
+  stalemate_patience: 1
+tools:
+  mcp_url: http://127.0.0.1:8005/mcp
+  agent_tools:
+  - search_knowledge_base
+debate_system_prompt_file: prompts/debate_system_prompt.txt
+block: C_cross_vendor_L
+priority: should
+replicate: 1

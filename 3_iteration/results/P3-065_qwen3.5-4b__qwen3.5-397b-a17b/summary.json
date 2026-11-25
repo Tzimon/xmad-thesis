@@ -1,0 +1,100 @@
+{
+  "run_id": "P3-065",
+  "label": "qwen3.5-4b__qwen3.5-397b-a17b",
+  "agent_a": "qwen3.5-4b",
+  "agent_b": "qwen3.5-397b-a17b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.643,
+  "f1": 0.7993,
+  "exact_match_consensus_only": 0.6707,
+  "source_counts": {
+    "consensus": 914,
+    "judge": 86
+  },
+  "consensus_rate": 0.914,
+  "judge_rate": 0.086,
+  "stop_reason_counts": {
+    "consensus": 914,
+    "stalemate": 86
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.594,
+    "agent_b": 0.647
+  },
+  "evidence_jaccard_round1": 0.7929,
+  "rounds_mean": 1.276,
+  "wall_time_s": {
+    "mean": 4.788,
+    "p50": 1.774,
+    "p90": 7.282,
+    "p99": 59.533,
+    "total": 4787.9
+  },
+  "tokens": {
+    "agent_a": 7222268,
+    "agent_b": 4766252
+  },
+  "truncated_replies": {
+    "agent_a": 56,
+    "agent_b": 2
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 131,
+    "agent_b": 51
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "agent_a_wh": 454.01,
+    "agent_b_wh": 1290.92,
+    "total_wh": 1744.93,
+    "per_gpu": {
+      "0": {
+        "wh": 454.01,
+        "vram_peak_mib": 128775
+      },
+      "1": {
+        "wh": 318.2,
+        "vram_peak_mib": 127967
+      },
+      "2": {
+        "wh": 308.0,
+        "vram_peak_mib": 127967
+      },
+      "3": {
+        "wh": 336.34,
+        "vram_peak_mib": 127969
+      },
+      "4": {
+        "wh": 328.39,
+        "vram_peak_mib": 127969
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.1204,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-08T08:55:34",
+  "judge_model": "deepseek-v4-flash"
+}

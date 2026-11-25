@@ -1,0 +1,48 @@
+# written by phase4.py at 2026-10-30T03:48:50 -- exact configuration of this run
+run:
+  run_id: P4-MSQ-058
+  label: qwen3.5-9b__ministral3-8b
+  n_questions: 1000
+  seed: 42
+dataset:
+  name: musique
+  config: answerable
+  split: dev
+agents:
+  agent_a:
+    model_key: qwen3.5-9b
+    alias: qwen3.5-9b
+    url: http://127.0.0.1:8000/v1
+    gpus:
+    - 0
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+  agent_b:
+    model_key: ministral3-8b
+    alias: ministral3-8b
+    url: http://127.0.0.1:8001/v1
+    gpus:
+    - 1
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+debate:
+  max_rounds: 10
+  force_first_search: true
+  stalemate_patience: 1
+tools:
+  mcp_url: http://127.0.0.1:8005/mcp
+  agent_tools:
+  - search_knowledge_base
+debate_system_prompt_file: prompts/debate_system_prompt.txt
+benchmark: musique
+block: C_cross_vendor_S
+priority: could
+replicate: 1

@@ -1,0 +1,541 @@
+# xmad/4_iteration/models.yaml
+#
+# COPIED FROM 3_iteration/models.yaml (model registry = configuration, not results).
+# Phase 4 uses a subset of these models (runs.yaml). The `excluded` entries are
+# FINDINGS OF PHASE 3 (smoke test / pre-test there) and are carried over as prior
+# knowledge; Phase 4 does not re-test the excluded models. Every model that
+# Phase 4 runs gets its own smoke test in 4_iteration/smoke/ before it is used.
+#
+# Phase 3 model list. Selection principle (PLAN, 2026-10-05):
+#   * Focus: dense vs. Mixture-of-Experts (MoE).
+#   * Few vendors, but each one deep: several sizes per vendor, and a dense
+#     and an MoE model in the same vendor wherever one exists, so dense vs.
+#     MoE can be compared with the vendor held fixed.
+#   * Five vendors: Alibaba (Qwen), Google (Gemma 4), Mistral, NVIDIA
+#     (Nemotron), Meta (Llama / Muse; dense only, see 'Not included').
+#   * Attention / sequence-mixer type is RECORDED (field `mixer`) for the
+#     analysis but was NOT a selection criterion.
+#   * Every model must fit, together with its debate partner, on ONE node with
+#     8x H200 (141 GB each, ~1128 GB total) -- requirement C1.2.
+#
+# Field reference
+#   hf_id            Hugging Face repo that download_models.py fetches
+#   hf_id_verified   true = repo id confirmed on recipes.vllm.ai (2026-10-05);
+#                    false = still to be checked (download_models.py --check)
+#   vendor / family  developer and model family
+#   release          YYYY-MM (approximate where only the year is known)
+#   ffn              dense | moe
+#   params_total_b / params_active_b   in billions (active == total for dense)
+#   tier             S (<= 15B total), M (25-35B), L (>= 70B)
+#   mixer            recorded only: full_gqa | swa_global | gdn_hybrid |
+#                    mamba2_hybrid | sparse_hybrid
+#   dtype            precision to serve; all L-tier models whose vendor ships
+#                    an official FP8 checkpoint are served in FP8 (needed to
+#                    fit two large models on one node). Disclosed confound.
+#   gpus             tensor-parallel size on H200 incl. KV-cache headroom
+#   disk_gb          approximate checkpoint size (download planning only)
+#   ignore           extra ignore patterns for the download
+#   tool_call_parsers  vLLM --tool-call-parser candidates; smoke_test.py tries
+#                    them in order and records the first that works
+#   vllm_args        extra `vllm serve` flags (from the vLLM recipes). Paths
+#                    "templates/..." are relative to 3_iteration/; "hf:<file>"
+#                    is a file inside the model's HF snapshot. The launcher
+#                    always adds --generation-config vllm (no model sampling
+#                    defaults), --tensor-parallel-size <gpus>, --seed 0.
+#   request_extra_body / system_prompt_suffix
+#                    reasoning switched OFF for every debating agent. Preferred
+#                    server-side (--default-chat-template-kwargs in vllm_args),
+#                    else per request, else -- only Muse --
+#                    as a line appended to the system prompt (disclosed deviation).
+#   role             anchor (Phase 2 model) | judge (not a debater)
+#   excluded         reason why the model is not used (its runs show as "blocked")
+#
+# Not included, and why
+#   Qwen3.8-2.4T-A95B   ~2.4 TB even in FP8 > one node (~1.13 TB); would need 3 nodes alone.
+#   Mistral-Large-3-675B-A41B, Nemotron-3-Ultra-550B-A55B, DeepSeek-V4.1-Flash
+#                       fill a whole node alone -> no room for the debate partner.
+#   Mistral-Medium-3.5-128B  needs a vLLM nightly build (no stable release yet);
+#                       dropped to keep the setup on one stable vLLM version.
+#   Llama-4-Scout / Maverick (Meta's only open MoEs) are natively multimodal; the
+#                       Llama 4 license does not grant the rights for its multimodal
+#                       models to individuals domiciled / companies based in the EU.
+#                       Meta therefore contributes dense models only.
+#   Nemotron-Nano-9B-v2 its tool-call parser plugin (nemotron_json, 2025) does not
+#                       load in vLLM 0.31 (smoke test 2026-10-05); replaced by the
+#                       same-generation dense Nemotron-3-Nano-4B.
+#   Muse Spark 1.2      open weights announced (Aug 2026) but not published.
+#   gpt-oss, DeepSeek   MoE only (no dense counterpart from the same vendor);
+#                       not used as debaters. DeepSeek-V4-Flash is the JUDGE (below):
+#                       a strong model from a family that does not debate.
+
+models:
+
+  # ==========================================================================
+  # Alibaba -- Qwen (deepest ladder: dense 4/9/27B, MoE 35/122/397B, + Qwen3.8)
+  # ==========================================================================
+  qwen2.5-7b:
+    hf_id: Qwen/Qwen2.5-7B-Instruct
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen2.5
+    release: 2024-09
+    ffn: dense
+    params_total_b: 7.6
+    params_active_b: 7.6
+    tier: S
+    mixer: full_gqa
+    dtype: bf16
+    gpus: 1
+    disk_gb: 15
+    role: anchor   # Phase 2 agent A and judge; re-run on the new vLLM stack
+    tool_call_parsers: [hermes]
+    vllm_args: []
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.5-4b:
+    hf_id: Qwen/Qwen3.5-4B
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen3.5
+    release: 2026-02
+    ffn: dense
+    params_total_b: 4
+    params_active_b: 4
+    tier: S
+    mixer: gdn_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 9
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.5-9b:
+    hf_id: Qwen/Qwen3.5-9B
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen3.5
+    release: 2026-02
+    ffn: dense
+    params_total_b: 9
+    params_active_b: 9
+    tier: S
+    mixer: gdn_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 19
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.5-27b:
+    hf_id: Qwen/Qwen3.5-27B
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen3.5
+    release: 2026-02
+    ffn: dense
+    params_total_b: 27
+    params_active_b: 27
+    tier: M
+    mixer: gdn_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 56
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.5-35b-a3b:
+    hf_id: Qwen/Qwen3.5-35B-A3B
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen3.5
+    release: 2026-02
+    ffn: moe
+    params_total_b: 35
+    params_active_b: 3
+    tier: M
+    mixer: gdn_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 72
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.5-122b-a10b:
+    hf_id: Qwen/Qwen3.5-122B-A10B-FP8
+    hf_id_verified: true      # FP8 naming convention Qwen3.5-{size}-FP8 per vLLM recipe
+    vendor: alibaba
+    family: qwen3.5
+    release: 2026-02
+    ffn: moe
+    params_total_b: 122
+    params_active_b: 10
+    tier: L
+    mixer: gdn_hybrid
+    dtype: fp8
+    gpus: 2
+    disk_gb: 125
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.5-397b-a17b:
+    hf_id: Qwen/Qwen3.5-397B-A17B-FP8
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen3.5
+    release: 2026-02
+    ffn: moe
+    params_total_b: 397
+    params_active_b: 17
+    tier: L
+    mixer: gdn_hybrid
+    dtype: fp8
+    gpus: 4
+    disk_gb: 400
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.8-27b:
+    hf_id: Qwen/Qwen3.8-27B
+    hf_id_verified: true
+    vendor: alibaba
+    family: qwen3.8
+    release: 2026-08
+    ffn: dense
+    params_total_b: 27
+    params_active_b: 27
+    tier: M
+    mixer: gdn_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 56
+    tool_call_parsers: [qwen3_xml, qwen3_coder]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  qwen3.8-flash-next:
+    hf_id: Qwen/Qwen3.8-Flash-Next-FP8
+    hf_id_verified: false     # recipe lists Qwen/Qwen3.8-Flash-Next; FP8 repo name VERIFY
+    vendor: alibaba
+    family: qwen3.8
+    release: 2026-09
+    ffn: moe
+    params_total_b: 176       # 125B + 51B n-gram embeddings (recipe)
+    params_active_b: 6
+    tier: L
+    mixer: sparse_hybrid      # Gated DeltaNet + Qwen Sparse Attention
+    dtype: fp8
+    gpus: 4                   # FP8 ~173 GiB; recipe validates TP2 on 288 GB GPUs, TEP8 on H200 -> VERIFY TP4
+    disk_gb: 180
+    tool_call_parsers: [qwen3_xml, qwen3_coder]
+    vllm_args: [--reasoning-parser, qwen3, --language-model-only, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  # ==========================================================================
+  # Google -- Gemma 4 (dense E4B/12B/31B, MoE 26B-A4B)
+  # ==========================================================================
+  gemma4-e4b:
+    hf_id: google/gemma-4-E4B-it
+    hf_id_verified: true
+    vendor: google
+    family: gemma4
+    release: 2026
+    ffn: dense
+    params_total_b: 4         # "effective" 4B (per-layer embeddings) -- VERIFY raw count
+    params_active_b: 4
+    tier: S
+    mixer: swa_global
+    dtype: bf16
+    gpus: 1
+    disk_gb: 16
+    tool_call_parsers: [gemma4]
+    vllm_args: [--reasoning-parser, gemma4, --chat-template, templates/tool_chat_template_gemma4.jinja, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  gemma4-12b:
+    hf_id: google/gemma-4-12B-it
+    hf_id_verified: true
+    vendor: google
+    family: gemma4
+    release: 2026
+    ffn: dense
+    params_total_b: 12
+    params_active_b: 12
+    tier: S
+    mixer: swa_global
+    dtype: bf16
+    gpus: 1
+    disk_gb: 25
+    tool_call_parsers: [gemma4]
+    vllm_args: [--reasoning-parser, gemma4, --chat-template, templates/tool_chat_template_gemma4.jinja, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  gemma4-31b:
+    hf_id: google/gemma-4-31B-it
+    hf_id_verified: true
+    vendor: google
+    family: gemma4
+    release: 2026
+    ffn: dense
+    params_total_b: 31
+    params_active_b: 31
+    tier: M
+    mixer: swa_global
+    dtype: bf16
+    gpus: 1
+    disk_gb: 63
+    tool_call_parsers: [gemma4]
+    vllm_args: [--reasoning-parser, gemma4, --chat-template, templates/tool_chat_template_gemma4.jinja, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  gemma4-26b-a4b:
+    hf_id: google/gemma-4-26B-A4B-it
+    hf_id_verified: true
+    vendor: google
+    family: gemma4
+    release: 2026
+    ffn: moe
+    params_total_b: 25.2
+    params_active_b: 3.8
+    tier: M
+    mixer: swa_global
+    dtype: bf16
+    gpus: 1
+    disk_gb: 52
+    tool_call_parsers: [gemma4]
+    vllm_args: [--reasoning-parser, gemma4, --chat-template, templates/tool_chat_template_gemma4.jinja, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  # ==========================================================================
+  # Mistral (dense 8B/14B, MoE 119B-A6.5B)
+  # Mistral checkpoints are loaded in Mistral format (consolidated*.safetensors,
+  # params.json, tekken.json) -- those files must NOT be ignored on download.
+  # ==========================================================================
+  ministral3-8b:
+    hf_id: mistralai/Ministral-3-8B-Instruct-2512
+    hf_id_verified: false     # recipe lists 14B-Instruct and 8B-Reasoning; VERIFY 8B-Instruct id
+    vendor: mistral
+    family: ministral3
+    release: 2025-12
+    ffn: dense
+    params_total_b: 8
+    params_active_b: 8
+    tier: S
+    mixer: full_gqa           # VERIFY
+    dtype: fp8                # shipped in FP8
+    gpus: 1
+    disk_gb: 10
+    mistral_format: true
+    tool_call_parsers: [mistral]
+    vllm_args: [--tokenizer-mode, mistral, --config-format, mistral, --load-format, mistral]
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  ministral3-14b:
+    hf_id: mistralai/Ministral-3-14B-Instruct-2512
+    hf_id_verified: true
+    vendor: mistral
+    family: ministral3
+    release: 2025-12
+    ffn: dense
+    params_total_b: 14
+    params_active_b: 14
+    tier: S
+    mixer: full_gqa           # VERIFY
+    dtype: fp8
+    gpus: 1
+    disk_gb: 16
+    mistral_format: true
+    tool_call_parsers: [mistral]
+    vllm_args: [--tokenizer-mode, mistral, --config-format, mistral, --load-format, mistral]
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  mistral-small4-119b:
+    hf_id: mistralai/Mistral-Small-4-119B-2603
+    hf_id_verified: true
+    vendor: mistral
+    family: mistral-small4
+    release: 2026-03
+    ffn: moe
+    params_total_b: 119
+    params_active_b: 6.5
+    tier: L
+    mixer: full_gqa           # VERIFY
+    dtype: fp8                # shipped in FP8
+    gpus: 2                   # recipe: TP2 on H200
+    disk_gb: 125
+    mistral_format: true
+    tool_call_parsers: [mistral]
+    vllm_args: [--tokenizer-mode, mistral, --config-format, mistral, --load-format, mistral, --reasoning-parser, mistral]
+    request_extra_body: {"reasoning_effort": "none"}
+    system_prompt_suffix: ""
+
+  # ==========================================================================
+  # NVIDIA -- Nemotron 3 (dense 4B, MoE 30B-A3B/120B-A12B; one generation)
+  # ==========================================================================
+  nemotron3-nano-4b:
+    hf_id: nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+    hf_id_verified: true
+    vendor: nvidia
+    family: nemotron3
+    release: 2026-04
+    ffn: dense
+    params_total_b: 4
+    params_active_b: 4
+    tier: S
+    mixer: mamba2_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 9
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  nemotron3-nano-30b-a3b:
+    excluded: "no answer: keeps calling tools even when asked for the answer without tools (smoke 2026-10-06, both parsers)"
+    hf_id: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
+    hf_id_verified: true
+    vendor: nvidia
+    family: nemotron3
+    release: 2025-12
+    ffn: moe
+    params_total_b: 31.6
+    params_active_b: 3.5
+    tier: M
+    mixer: mamba2_hybrid
+    dtype: bf16
+    gpus: 1
+    disk_gb: 63
+    tool_call_parsers: [qwen3_coder, qwen3_xml]
+    vllm_args: [--default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  nemotron3-super-120b-a12b:
+    excluded: "no answer in 21/30 pre-test questions; same behaviour as Nemotron-3-Nano-30B (pre-test 2026-10-07)"
+    hf_id: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
+    hf_id_verified: true
+    vendor: nvidia
+    family: nemotron3
+    release: 2026
+    ffn: moe
+    params_total_b: 120
+    params_active_b: 12
+    tier: L
+    mixer: mamba2_hybrid
+    dtype: fp8
+    gpus: 2
+    disk_gb: 125
+    tool_call_parsers: [qwen3_xml, qwen3_coder]
+    vllm_args: [--reasoning-parser, nemotron_v3, --default-chat-template-kwargs, '{"enable_thinking": false}']
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  # ==========================================================================
+  # Meta (dense only: 8B/30B/70B -- see 'Not included' for Llama 4)
+  # ==========================================================================
+  llama3.1-8b:
+    hf_id: unsloth/Meta-Llama-3.1-8B-Instruct   # ungated mirror used in Phase 2
+    hf_id_verified: true
+    vendor: meta
+    family: llama3
+    release: 2024-07
+    ffn: dense
+    params_total_b: 8
+    params_active_b: 8
+    tier: S
+    mixer: full_gqa
+    dtype: bf16
+    gpus: 1
+    disk_gb: 16
+    role: anchor   # Phase 2 agent B
+    tool_call_parsers: [llama3_json]
+    vllm_args: [--chat-template, templates/tool_chat_template_llama3.1_json.jinja]
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  muse-glimmer-30b:
+    hf_id: meta-models/Muse-Glimmer-30B
+    hf_id_verified: true
+    vendor: meta
+    family: muse
+    release: 2026-08
+    ffn: dense
+    params_total_b: 29.6
+    params_active_b: 29.6
+    tier: M
+    mixer: swa_global         # VERIFY (sources disagree: SWA+global vs. standard attention)
+    dtype: bf16
+    gpus: 1
+    disk_gb: 62
+    tool_call_parsers: [muse_glimmer]
+    vllm_args: [--reasoning-parser, muse_glimmer]
+    request_extra_body: {}
+    system_prompt_suffix: "Reasoning strength: low"
+
+  llama3.3-70b:
+    hf_id: unsloth/Llama-3.3-70B-Instruct   # ungated mirror; access to meta-llama/ was rejected
+    hf_id_verified: true      # already in the cluster's HF cache (models--unsloth--Llama-3.3-70B-Instruct)
+    vendor: meta
+    family: llama3
+    release: 2024-12
+    ffn: dense
+    params_total_b: 70
+    params_active_b: 70
+    tier: L
+    mixer: full_gqa
+    dtype: bf16
+    gpus: 2
+    disk_gb: 142
+    ignore: ["original/*"]
+    tool_call_parsers: [llama3_json]
+    vllm_args: [--chat-template, templates/tool_chat_template_llama3.1_json.jinja]
+    request_extra_body: {}
+    system_prompt_suffix: ""
+
+  # ==========================================================================
+  # JUDGE -- not a debater. Runs AFTER the debates in a separate pass
+  # (phase3.py judge), so it never competes with debate runs for GPUs.
+  # Reasoning stays ON: the judge is not an experimental variable and should be
+  # as capable as possible; it is the same for every run.
+  # ==========================================================================
+  deepseek-v4-flash:
+    hf_id: deepseek-ai/DeepSeek-V4-Flash
+    hf_id_verified: true
+    role: judge
+    vendor: deepseek
+    family: deepseek-v4
+    release: 2026-04
+    ffn: moe
+    params_total_b: 284
+    params_active_b: 13
+    tier: L
+    mixer: sparse_hybrid
+    dtype: fp8
+    gpus: 4
+    disk_gb: 300              # estimate -- check with download_models.py --check
+    tool_call_parsers: [deepseek_v4]
+    vllm_args: [--reasoning-parser, deepseek_v4]
+    request_extra_body: {}
+    system_prompt_suffix: ""
+

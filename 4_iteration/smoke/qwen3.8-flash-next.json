@@ -1,0 +1,48 @@
+{
+  "model": "qwen3.8-flash-next",
+  "hf_id": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "ok": true,
+  "tool_call_parser": "qwen3_xml",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-24T11:54:26",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_xml",
+      "server_started": true,
+      "load_s": 1340.5,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson director nationality\"}",
+          "{\"query\": \"Ed Wood film director nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: The knowledge base states Scott Derrickson is an American director/screenwriter/producer and Ed Wood was an American filmmaker/actor/writer/producer/director. Both are identified as American, so they are of the same nationality.",
+          "Final answer: Yes"
+        ],
+        "extra_searches_before_answer": 0,
+        "extra_search_queries": [],
+        "last_content": " they share the same nationality.\n\nReasoning summary: The knowledge base states Scott Derrickson is an American director/screenwriter/producer and Ed Wood was an American filmmaker/actor/writer/producer/director. Both are identified as American, so they are of the same nationality.\nFinal answer: Yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 108,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

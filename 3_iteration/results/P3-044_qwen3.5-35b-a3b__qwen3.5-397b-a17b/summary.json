@@ -1,0 +1,100 @@
+{
+  "run_id": "P3-044",
+  "label": "qwen3.5-35b-a3b__qwen3.5-397b-a17b",
+  "agent_a": "qwen3.5-35b-a3b",
+  "agent_b": "qwen3.5-397b-a17b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.647,
+  "f1": 0.8013,
+  "exact_match_consensus_only": 0.6727,
+  "source_counts": {
+    "consensus": 938,
+    "judge": 62
+  },
+  "consensus_rate": 0.938,
+  "judge_rate": 0.062,
+  "stop_reason_counts": {
+    "consensus": 938,
+    "stalemate": 62
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.613,
+    "agent_b": 0.647
+  },
+  "evidence_jaccard_round1": 0.7728,
+  "rounds_mean": 1.189,
+  "wall_time_s": {
+    "mean": 3.381,
+    "p50": 1.731,
+    "p90": 6.057,
+    "p99": 36.935,
+    "total": 3380.9
+  },
+  "tokens": {
+    "agent_a": 4777359,
+    "agent_b": 4374721
+  },
+  "truncated_replies": {
+    "agent_a": 9,
+    "agent_b": 2
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 56,
+    "agent_b": 54
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "agent_a_wh": 234.56,
+    "agent_b_wh": 1034.08,
+    "total_wh": 1268.64,
+    "per_gpu": {
+      "0": {
+        "wh": 234.56,
+        "vram_peak_mib": 128945
+      },
+      "1": {
+        "wh": 254.7,
+        "vram_peak_mib": 127967
+      },
+      "2": {
+        "wh": 246.72,
+        "vram_peak_mib": 127969
+      },
+      "3": {
+        "wh": 271.03,
+        "vram_peak_mib": 127969
+      },
+      "4": {
+        "wh": 261.64,
+        "vram_peak_mib": 127969
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.08754,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-08T08:45:46",
+  "judge_model": "deepseek-v4-flash"
+}

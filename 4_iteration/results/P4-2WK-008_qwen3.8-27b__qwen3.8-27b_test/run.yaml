@@ -1,0 +1,47 @@
+# written by phase4.py at 2026-10-24T15:46:37 -- exact configuration of this run
+run:
+  run_id: P4-2WK-008
+  label: qwen3.8-27b__qwen3.8-27b
+  n_questions: 30
+  seed: 42
+dataset:
+  name: 2wiki
+  config: april7
+  split: dev
+agents:
+  agent_a:
+    model_key: qwen3.8-27b
+    alias: qwen3.8-27b
+    url: http://127.0.0.1:8010/v1
+    gpus: &id001
+    - 5
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+  agent_b:
+    model_key: qwen3.8-27b
+    alias: qwen3.8-27b
+    url: http://127.0.0.1:8010/v1
+    gpus: *id001
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+debate:
+  max_rounds: 10
+  force_first_search: true
+  stalemate_patience: 1
+tools:
+  mcp_url: http://127.0.0.1:8015/mcp
+  agent_tools:
+  - search_knowledge_base
+debate_system_prompt_file: prompts/debate_system_prompt.txt
+benchmark: 2wiki
+block: A_homogeneous
+priority: must
+replicate: 1

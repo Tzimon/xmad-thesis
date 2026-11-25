@@ -1,0 +1,24 @@
+run                                                     n    EM   r1A   r1B noAnsA noAnsB forcA forcB trunc  err   s/q  flags
+P3-001_qwen2.5-7b__qwen2.5-7b_test                     30 0.600 0.600 0.633      0      0     0     0     0    0   0.8  
+P3-002_qwen3.5-4b__qwen3.5-4b_test                     30 0.700 0.733 0.667      0      0     4     2     3    0   4.2  truncated > 2%
+P3-003_qwen3.5-9b__qwen3.5-9b_test                     30 0.767 0.767 0.767      0      0     0     0     4    0   4.8  truncated > 2%
+P3-004_qwen3.5-27b__qwen3.5-27b_test                   30 0.733 0.733 0.733      0      0     3     3     0    0   5.8  
+P3-005_qwen3.5-35b-a3b__qwen3.5-35b-a3b_test           30 0.733 0.700 0.733      0      0     3     3     1    0   3.0  truncated > 2%
+P3-006_qwen3.5-122b-a10b__qwen3.5-122b-a10b_test       30 0.700 0.733 0.700      0      0     7     7     0    0   3.6  
+P3-007_qwen3.5-397b-a17b__qwen3.5-397b-a17b_test       30 0.733 0.733 0.733      0      0     2     2     0    0   6.5  
+P3-008_qwen3.8-27b__qwen3.8-27b_test                   30 0.733 0.733 0.733      0      0     8     7     0    0   4.2  
+P3-009_qwen3.8-flash-next__qwen3.8-flash-next_test     30 0.767 0.767 0.733      0      0    23    25     0    0   5.3  
+P3-010_gemma4-31b__gemma4-31b_test                     30 0.700 0.700 0.700      0      0     0     0     0    0   4.1  
+P3-011_gemma4-26b-a4b__gemma4-26b-a4b_test             30 0.733 0.700 0.700      0      0     1     1     2    0   3.8  truncated > 2%
+P3-012_ministral3-14b__ministral3-14b_test             30 0.633 0.600 0.567      0      0     3     3     0    0   2.0  
+P3-013_mistral-small4-119b__mistral-small4-119b_test   30 0.667 0.700 0.633      0      0     7     6     0    0   2.8  
+P3-014_nemotron3-nano-4b__nemotron3-nano-4b_test       30 0.600 0.600 0.600      0      0     0     0     0    0   0.5  
+P3-016_llama3.1-8b__llama3.1-8b_test                   30 0.467 0.467 0.433      0      0     0     0     0    0   0.6  
+P3-017_muse-glimmer-30b__muse-glimmer-30b_test         30 0.767 0.767 0.767      0      0     4     5     0    0  17.0  
+P3-052_gemma4-e4b__gemma4-e4b_test                     30 0.767 0.767 0.767      0      0     0     0     0    0   3.4  
+P3-053_gemma4-12b__gemma4-12b_test                     30 0.700 0.700 0.700      0      0     0     0     0    0   2.4  
+P3-054_ministral3-8b__ministral3-8b_test               30 0.500 0.467 0.533      0      0     3     3     0    0   1.1  
+P3-055_nemotron3-super-120b-a12b__nemotron3-super-12   30 0.433 0.233 0.200     21     21   113   112     0    0  11.6  no answer (round 1) > 1%; round-1 EM < 0.30
+P3-056_llama3.3-70b__llama3.3-70b_test                 30 0.533 0.533 0.500      0      0     0     0     0    0   2.7  
+
+5 run(s) flagged -- look at their debate_results.csv before the real runs

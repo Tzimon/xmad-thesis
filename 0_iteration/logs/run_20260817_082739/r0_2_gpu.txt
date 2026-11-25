@@ -1,0 +1,3 @@
+cuda_available True
+device NVIDIA H200
+device_count 8

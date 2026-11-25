@@ -1,0 +1,156 @@
+id,question,gold,pred,pred_raw,em,f1,latency_s,tool_calls,llm_calls,prompt_tokens,completion_tokens,total_tokens
+5a8b57f25542995d1e6f1371,Were Scott Derrickson and Ed Wood of the same nationality?,yes,yes,"Based on the information retrieved, Scott Derrickson is American, while Ed Wood is also described as American. Therefore, they are of the same nationality.
+
+Final answer: yes",1,1.0,1.054,2,2,1345,91,1436
+5a8c7595554299585d9e36b6,What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?,Chief of Protocol,No,"The information provided does not specify any government positions held by the actress who portrayed Corliss Archer in ""Kiss and Tell."" Shirley Temple, who played Corliss Archer, did not hold any government positions according to the given context.
+
+Final answer: No",0,0.0,0.524,1,2,1005,93,1098
+5a85ea095542994775f606a8,"What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?",Animorphs,Animorphs,"Based on the information provided, the series that matches the description of being a science fantasy young adult series told in first person with companion books narrating the stories of enslaved worlds and alien species is [Animorphs].
+
+Final answer: Animorphs",1,1.0,0.499,1,2,1161,88,1249
+5adbf0a255429947ff17385a,Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?,no,No,"The Laleli Mosque is located in Laleli, Fatih, Istanbul, while the Esma Sultan Mansion is in the Ortaköy neighborhood of Istanbul. These are different neighborhoods.
+
+Final answer: No",1,1.0,0.607,2,2,1388,105,1493
+5a8e3ea95542995a26add48d,"The director of the romantic comedy ""Big Stone Gap"" is based in what New York city?","Greenwich Village, New York City",New York City,"From the information provided, the director of ""Big Stone Gap,"" Adriana Trigiani, is based in New York. However, the specific city is not mentioned. Given the context and her production company Altar Identity Studios being a subsidiary of Media Society, it is reasonable to infer she is based in New York City.
+
+Final answer: New York City",0,0.75,0.583,1,2,1011,104,1115
+5abd94525542992ac4f382d2,2014 S/S is the debut album of a South Korean boy group that was formed by who?,YG Entertainment,YG Entertainment,Final answer: YG Entertainment,1,1.0,0.255,1,2,1034,41,1075
+5a85b2d95542997b5ce40028,Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?,Eenasul Fateh,Eenasul Fateh,"Based on the information provided, Eenasul Fateh, known by his stage name Aladin, was a Bangladeshi-British cultural practitioner, magician, and live artist who had previously worked as an international management consultant.
+
+Final answer: Eenasul Fateh",1,1.0,0.499,1,2,991,88,1079
+5a87ab905542996e4f3088c1,The arena where the Lewiston Maineiacs played their home games can seat how many people?,"3,677 seated",3677,"Based on the information provided, the Androscoggin Bank Colisée, where the Lewiston Maineiacs played their home games, has a seating capacity of 3,677 people.
+
+Final answer: 3677",0,0.6667,0.451,1,2,997,78,1075
+5a7bbb64554299042af8f7cc,"Who is older, Annie Morton or Terry Richardson?",Terry Richardson,yes,"Based on the birth dates provided, Annie Morton was born on October 8, 1970, and Terry Richardson was born on August 14, 1965. Therefore, Terry Richardson is older than Annie Morton.
+
+Final answer: yes",0,0.0,0.623,2,2,989,111,1100
+5a8db19d5542994ba4e3dd00,Are Local H and For Against both from the United States?,yes,yes,"From the information provided, Local H is from Zion, Illinois, which is in the United States. For Against is from Lincoln, Nebraska, which is also in the United States. Therefore, both bands are from the United States.
+
+Final answer: yes",1,1.0,0.625,2,2,1542,108,1650
+5a7166395542994082a3e814,"What is the name of the fight song of the university whose main campus is in Lawrence, Kansas and whose branch campuses are in the Kansas City metropolitan area?",Kansas Song,KU Fighting Song,"From the information provided, the university with the main campus in Lawrence, Kansas, and branch campuses in the Kansas City metropolitan area is the University of Kansas. The fight song of the University of Kansas is ""KU Fighting Song.""
+
+Final answer: KU Fighting Song",0,0.4,0.491,1,2,1328,85,1413
+5a877e5d5542993e715abf7d,"What screenwriter with credits for ""Evolution"" co-wrote a film starring Nicolas Cage and Téa Leoni?",David Weissman,David Diamond,"From the information provided, David Diamond and David Weissman co-wrote ""The Family Man,"" which stars Nicolas Cage and Téa Leoni.
+
+Final answer: David Diamond",0,0.5,0.415,1,2,1035,72,1107
+5ab3b0bf5542992ade7c6e39,What year did Guns N Roses perform a promo for a movie starring Arnold Schwarzenegger as a former New York Police detective?,1999,1999,"Based on the information provided, Guns N' Roses performed a promo for the movie ""End of Days"" starring Arnold Schwarzenegger as a former New York Police detective in 1999 with their song ""Oh My God"".
+
+Final answer: 1999",1,1.0,0.515,1,2,1092,91,1183
+5ab56e32554299637185c594,Are Random House Tower and 888 7th Avenue both used for real estate?,no,yes,"From the information gathered, Random House Tower is used as the headquarters of book publisher Random House and a luxury apartment complex. On the other hand, 888 7th Avenue is used as the headquarters of Vornado Realty Trust and previously housed Pershing Square Capital Management, both real estate-related entities.
+
+Final answer: yes",0,0.0,0.733,2,2,1319,129,1448
+5ab6d09255429954757d337d,The football manager who recruited David Beckham managed Manchester United during what timeframe?,from 1986 to 2013,1945-1969,"Based on the information provided, David Beckham was signed by Matt Busby, who managed Manchester United from 1945 to 1969 and again for the second half of the 1970-71 season.
+
+Final answer: 1945-1969",0,0.0,0.539,1,2,962,96,1058
+5a75e05c55429976ec32bc5f,Brown State Fishing Lake is in a country that has a population of how many inhabitants ?,"9,984",no,"The passage states that as of the 2010 census, the population of Brown County, Kansas was 9,984. However, this is the population of the county, not the entire state of Kansas. For the state population, we need to look for a more recent and comprehensive source. Since the knowledge base did not provide the current population of Kansas, I will have to infer that the question might be based on outdated or incomplete data.
+
+Final answer: no",0,0.0,1.142,2,3,2326,207,2533
+5ab3e45655429976abd1bcd4,The Vermont Catamounts men's soccer team currently competes in a conference that was formerly known as what from 1988 to 1996?,the North Atlantic Conference,NoData,"From the given information, there is no direct mention of the conference name for the Vermont Catamounts men's soccer team from 1988 to 1996. The passage provides details about their current conference (America East) but does not give historical conference names.
+
+Final answer: NoData",0,0.0,0.533,1,2,1054,95,1149
+5ab29c24554299449642c932,Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?,yes,yes,"Both Giuseppe Verdi and Ambroise Thomas were opera composers. Verdi is well-known for his operas such as ""Rigoletto,"" ""La traviata,"" and ""Aida."" Thomas is recognized for his operas like ""Mignon"" and ""Hamlet.""
+
+Final answer: yes",1,1.0,0.703,2,2,1444,123,1567
+5ae0d4c9554299603e418468,Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the administration of a president that served during what years?,1969 until 1974,1969-1974,"From the information provided, Roger O. Egeberg served as Assistant Secretary for Health and Scientific Affairs during the Nixon administration. Richard Nixon was president from 1969 to 1974.
+
+Final answer: 1969-1974",0,0.0,0.515,1,2,1269,90,1359
+5a8133725542995ce29dcbdb,"Which writer was from England, Henry Roth or Robert Erskine Childers?",Robert Erskine Childers DSC,Robert Erskine Childers,"Based on the information retrieved, Henry Roth was an American novelist and short story writer, while Robert Erskine Childers was a British writer. Therefore, the writer from England is Robert Erskine Childers.
+
+Final answer: Robert Erskine Childers",0,0.8571,0.654,2,2,1372,115,1487
+5ae7a8175542993210983ed8,Which other Mexican Formula One race car driver has held the podium besides the Force India driver born in 1990?,Pedro Rodríguez,Sergio,"From the information provided, we can see that Sergio Pérez is the only other Mexican Formula One driver to have held the podium besides the Force India driver born in 1990. Michael James Lewis, though born in 1990, is not mentioned as having held the podium.
+
+Final answer: Sergio",0,0.0,0.629,1,2,1052,113,1165
+5ae6050f55429929b0807a5e,This singer of A Rather Blustery Day also voiced what hedgehog?,Sonic,Pooh,"Based on the information retrieved, Jim Cummings, who sang ""A Rather Blustery Day"" as Pooh, also voiced Pooh in ""Hip Hip Pooh-Ray!"".
+
+Final answer: Pooh",0,0.0,0.451,1,2,1063,78,1141
+5adddccd5542997dc7907069,"Aside from the Apple Remote, what other device can control the program Apple Remote was originally designed to interact with?",keyboard function keys,Front Row,"Prior to the Apple Remote, Apple produced several nameless IR remotes. However, for the program the Apple Remote was originally designed to interact with, it was Front Row.
+
+Final answer: Front Row",0,0.0,0.434,1,2,1086,75,1161
+5ae2070a5542994d89d5b313,"Which performance act has a higher instrument to person ratio, Badly Drawn Boy or Wolf Alice? ",Badly Drawn Boy,BadlyDrawnBoy,"Based on the information provided:
+
+- Badly Drawn Boy is described as a solo artist and multi-instrumentalist. For instance, he composed and performed the entire soundtrack for ""About a Boy,"" playing multiple instruments. 
+- Wolf Alice is described as a four-piece alternative rock band with multiple band members.
+
+Therefore, Badly Drawn Boy likely has a higher instrument-to-person ratio, as he is a solo artist playing multiple instruments, while Wolf Alice has four band members.
+
+Final answer: BadlyDrawnBoy",0,0.0,0.959,2,2,1239,173,1412
+5ae22b8d554299234fd0440f,What was the father of Kasper Schmeichel voted to be by the IFFHS in 1992?,World's Best Goalkeeper,World's Best Goalkeeper,"Based on the information provided, Kasper Schmeichel's father, Peter Schmeichel, was voted the IFFHS World's Best Goalkeeper in 1992.
+
+Final answer: World's Best Goalkeeper",1,1.0,0.461,1,2,985,81,1066
+5a722b8655429971e9dc9329,Who was the writer of These Boots Are Made for Walkin' and who died in 2007?,Barton Lee Hazlewood,Lee Hazlewood,"From the information provided, Lee Hazlewood was the writer of ""These Boots Are Made for Walkin'"". Lee Hazlewood died in 2007.
+
+Final answer: Lee Hazlewood",0,0.8,0.629,2,2,1529,109,1638
+5adf37a95542995ec70e8f97,"The 2011–12 VCU Rams men's basketball team, led by third year head coach Shaka Smart, represented Virginia Commonwealth University which was founded in what year?",1838,1838,"Based on the information provided, Virginia Commonwealth University was founded in 1838.
+
+Final answer: 1838",1,1.0,0.358,1,2,1223,59,1282
+5abd259d55429924427fcf1a,"Are both Dictyosperma, and Huernia described as a genus?",yes,yes,"From the information retrieved, both Dictyosperma and Huernia are indeed described as genera. 
+
+Final answer: yes",1,1.0,0.539,2,3,2200,91,2291
+5a828c8355429966c78a6a50,Kaiser Ventures corporation was founded by an American industrialist who became known as the father of modern American shipbuilding?,Henry J. Kaiser,yes,"From the passages, we can see that Henry J. Kaiser is referred to as the ""father of modern American shipbuilding"". He founded Kaiser Shipyards and led various other industrial ventures including Kaiser Aluminum and Kaiser Steel.
+
+Final answer: yes",0,0.0,0.463,1,2,1124,81,1205
+5a8a3e745542996c9b8d5e70,"What is the name for the adventure in ""Tunnels and Trolls"", a game designed by Ken St. Andre?",Arena of Khazan,Arena of Khazan,"Based on the information provided, ""Arena of Khazan"" is a notable adventure in ""Tunnels and Trolls"".
+
+Final answer: Arena of Khazan",1,1.0,0.401,1,2,936,70,1006
+5ac23ff0554299636651994d,"When was Poison's album ""Shut Up, Make Love"" released?",2000,2000,"Based on the information provided, the album ""Crack a Smile...and More!"", which contains the song ""Shut Up, Make Love"", was released on March 14, 2000.
+
+Final answer: 2000",1,1.0,0.472,1,2,1153,82,1235
+5ae4a3265542995ad6573de5,"Hayden is a singer-songwriter from Canada, but where does Buck-Tick hail from?","Fujioka, Gunma",Japan,Final answer: Japan,0,0.0,0.229,1,2,1113,36,1149
+5ae0361155429925eb1afc2c,Which  French ace pilot and adventurer fly L'Oiseau Blanc,Charles Eugène,Charles Nungesser and François Coli,Final answer: Charles Nungesser and François Coli,0,0.2857,0.306,1,2,1002,51,1053
+5abc0a5d5542993f40c73c64,Are Freakonomics and In the Realm of the Hackers both American documentaries?,no,No,"From the information retrieved:
+
+1. Freakonomics: The Movie is explicitly described as an American documentary.
+2. In the Realm of the Hackers is described as an Australian documentary, not an American one.
+
+Final answer: No",1,1.0,0.657,2,2,1661,113,1774
+5a7cc50e554299452d57ba3e,"Which band, Letters to Cleo or Screaming Trees, had more members?",Letters to Cleo,Letters_to_Cleo,"From the information provided, Letters to Cleo had 6 members (Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and Tom Polce), while Screaming Trees originally had 4 members (Mark Lanegan, Gary Lee Conner, Van Conner, and Mark Pickerel). Therefore, Letters to Cleo had more members than Screaming Trees.
+
+Final answer: Letters_to_Cleo",0,0.0,0.845,2,2,1566,150,1716
+5abf63f15542997ec76fd3ea,Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of a civil war that ended when ?,October 1922,1923,"The Russian Civil War ended in 1923 in the sense that Red control of the newly formed Soviet Union was now assured, although armed national resistance in Central Asia was not completely crushed until 1934.
+
+Final answer: 1923",0,0.0,0.473,1,2,1430,81,1511
+5a8ef2a75542995a26add583,Seven Brief Lessons on Physics was written by an Italian physicist that has worked in France since what year?,2000,2000,"Based on the information provided, Carlo Rovelli, the author of ""Seven Brief Lessons on Physics,"" has worked in France since 2000.
+
+Final answer: 2000",1,1.0,0.609,2,2,1668,105,1773
+5a80721b554299485f5985ef,"The Livesey Hal War Memorial commemorates the fallen of which war, that had over 60 million casualties?",World War II,World War I,"From the information provided, the Livesey Hall War Memorial commemorates the fallen of World War I and World War II, but these wars do not match the description of having over 60 million casualties. Given the query's specific reference to a war with over 60 million casualties, it is likely referring to World War I, as it had approximately 60 million casualties. However, since the memorial specifically mentions World War II, and we are looking for a single war, the most accurate answer based on the information given would be World War I.
+
+Final answer: World War I",0,0.6667,0.828,1,2,961,152,1113
+5ab51dae5542991779162d82,Are both Elko Regional Airport and Gerald R. Ford International Airport located in Michigan?,no,No,"Based on the information provided:
+
+- Elko Regional Airport is located in Elko County, Nevada.
+- Gerald R. Ford International Airport is located in Cascade Township, approximately 13 miles southeast of Grand Rapids, Michigan.
+
+Therefore, only Gerald R. Ford International Airport is located in Michigan, while Elko Regional Airport is not.
+
+Final answer: No",1,1.0,0.799,2,3,2261,139,2400
+5a7571135542992d0ec05f98,Ralph Hefferline was a psychology professor at a university that is located in what city?,New York City,New York City,"Based on the information provided, Ralph Hefferline was a psychology professor at Columbia University, which is located in New York City.
+
+Final answer: New York City",1,1.0,0.355,1,2,926,61,987
+5a7a0e1e5542990783324e1a,Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?,Scotch Collie,Scotch Collie,"From the passages, we learn that the Scotch Collie includes Gordon and Irish Setters as ancestors. There is no information about the Manchester Terrier's ancestry.
+
+Final answer: Scotch Collie",1,1.0,0.571,2,2,1541,98,1639
+5a74106b55429979e288289e,Where is the company that Sachin Warrier worked for as a software engineer headquartered? ,Mumbai,Kochi,"Based on the information provided, Sachin Warrier worked as a software engineer at Tata Consultancy Services in Kochi.
+
+Final answer: Kochi",0,0.0,0.351,1,2,955,60,1015
+5a79311755429970f5fffe67,"A Japanese manga series based on a 16 year old high school student Ichitaka Seto, is written and illustrated by someone born in what year?",1962,No,"From the passages, we can see that the manga series about the 16-year-old high school student Ichitaka Seto is ""I""s (アイズ, Aizu), which is written and illustrated by Masakazu Katsura. To find out the birth year of Masakazu Katsura, we would need to search for additional information as this specific detail is not provided in the given passages.
+
+Final answer: No",0,0.0,0.707,1,2,1279,127,1406
+5ab2d3df554299194fa9352c,The battle in which Giuseppe Arimondi lost his life secured what for Ethiopia?,sovereignty,sovereignty,"Based on the information provided, the battle in which Giuseppe Arimondi lost his life at Adwa in 1896 secured Ethiopia's sovereignty and freedom from colonization.
+
+Final answer: sovereignty",1,1.0,0.457,1,2,1502,77,1579
+5a760ab65542994ccc918697,Alfred Balk served as the secretary of the Committee on the Employment of Minority Groups in the News Media under which United States Vice President?,Nelson Rockefeller,Gerald Ford,"From the information provided, Alfred Balk served as secretary of New York Governor Nelson Rockefeller's Committee on the Employment of Minority Groups in the News Media. Nelson Rockefeller was a Vice President under President Gerald Ford.
+
+Final answer: Gerald Ford",0,0.0,0.529,1,2,1210,91,1301
+5a7d54165542995f4f402256,"A medieval fortress in Dirleton, East Lothian, Scotland borders on the south side of what coastal area?",Yellowcraig,Firth of Forth,"Based on the information retrieved, Dirleton Castle, which is located in the village of Dirleton, borders on the south side of the Firth of Forth.
+
+Final answer: Firth of Forth",0,0.0,0.398,1,2,1014,69,1083
+5ab859a955429934fafe6d7b,Who is the writer of this song that was inspired by words on a tombstone and was the first track on the box set Back to Mono?,Phil Spector,Phil Spector,"Based on the information provided, the song ""To Know Him Is to Love Him"" that was inspired by words on a tombstone and was the first track on the Back to Mono box set was written by Phil Spector.
+
+Final answer: Phil Spector",1,1.0,0.533,1,2,1488,92,1580
+5add61d65542995b365fab21,What type of forum did a former Soviet statesman initiate?,Organizations could come together to address global issues,forum,Final answer: forum,0,0.0,0.252,1,2,1191,39,1230
+5a8e068b5542995085b37384,Are Ferocactus and Silene both types of plant?,yes,yes,"From the search results, we can see that Ferocactus is indeed a genus of plants, specifically cacti. Additionally, Silene is described as a genus of flowering plants in the family Caryophyllaceae, containing around 700 species. Both Ferocactus and Silene refer to genera of plants.
+
+Final answer: yes",1,1.0,0.755,2,3,1931,133,2064
+5abbf698554299114383a0b5,Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?,English Electric Canberra,English Electric Canberra,"From the information provided, the British first-generation jet-powered medium bomber used in the South West Pacific theatre of World War II is the English Electric Canberra.
+
+Final answer: English Electric Canberra",1,1.0,0.464,1,2,1153,81,1234

@@ -1,0 +1,113 @@
+{
+  "run_id": "P4-MSQ-019",
+  "label": "qwen3.8-27b__qwen3.8-flash-next",
+  "benchmark": "musique",
+  "agent_a": "qwen3.8-27b",
+  "agent_b": "qwen3.8-flash-next",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.592,
+  "f1": 0.7044,
+  "exact_match_consensus_only": 0.6283,
+  "source_counts": {
+    "consensus": 912,
+    "judge": 88
+  },
+  "consensus_rate": 0.912,
+  "judge_rate": 0.088,
+  "stop_reason_counts": {
+    "consensus": 912,
+    "stalemate": 88
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.509,
+    "agent_b": 0.566
+  },
+  "evidence_jaccard_round1": 0.729,
+  "evidence_recall": {
+    "agent_a_round1": 0.9536,
+    "agent_b_round1": 0.9739,
+    "union_round1": 0.9836,
+    "all_rounds": 0.988
+  },
+  "rounds_mean": 1.497,
+  "wall_time_s": {
+    "mean": 14.081,
+    "p50": 8.656,
+    "p90": 30.178,
+    "p99": 77.588,
+    "total": 14081.5
+  },
+  "tokens": {
+    "agent_a": 22501626,
+    "agent_b": 28354141
+  },
+  "tokens_split": {
+    "a_prompt": 21726999,
+    "a_completion": 774627,
+    "b_prompt": 27361017,
+    "b_completion": 993124
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 1
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 883,
+    "agent_b": 1221
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 2,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "agent_a_wh": 2054.19,
+    "agent_b_wh": 3329.11,
+    "total_wh": 5383.3,
+    "per_gpu": {
+      "0": {
+        "wh": 2054.19,
+        "vram_peak_mib": 129935
+      },
+      "1": {
+        "wh": 808.92,
+        "vram_peak_mib": 128963
+      },
+      "3": {
+        "wh": 848.95,
+        "vram_peak_mib": 128963
+      },
+      "4": {
+        "wh": 850.16,
+        "vram_peak_mib": 128963
+      },
+      "5": {
+        "wh": 821.08,
+        "vram_peak_mib": 128963
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.37145,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T04:41:19",
+  "judge_model": "deepseek-v4-flash"
+}

@@ -1,0 +1,103 @@
+{
+  "run_id": "P4-2WK-034",
+  "label": "qwen3.5-27b__qwen3.5-122b-a10b",
+  "benchmark": "2wiki",
+  "agent_a": "qwen3.5-27b",
+  "agent_b": "qwen3.5-122b-a10b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.723,
+  "f1": 0.7993,
+  "exact_match_consensus_only": 0.7364,
+  "source_counts": {
+    "consensus": 975,
+    "judge": 25
+  },
+  "consensus_rate": 0.975,
+  "judge_rate": 0.025,
+  "stop_reason_counts": {
+    "consensus": 975,
+    "stalemate": 25
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.725,
+    "agent_b": 0.724
+  },
+  "evidence_jaccard_round1": 0.9096,
+  "evidence_recall": {
+    "agent_a_round1": 0.9965,
+    "agent_b_round1": 0.996,
+    "union_round1": 0.9975,
+    "all_rounds": 0.9975
+  },
+  "rounds_mean": 1.134,
+  "wall_time_s": {
+    "mean": 8.322,
+    "p50": 4.659,
+    "p90": 14.026,
+    "p99": 66.881,
+    "total": 8322.4
+  },
+  "tokens": {
+    "agent_a": 7624529,
+    "agent_b": 8066912
+  },
+  "tokens_split": {
+    "a_prompt": 7168112,
+    "a_completion": 456417,
+    "b_prompt": 7647356,
+    "b_completion": 419556
+  },
+  "truncated_replies": {
+    "agent_a": 3,
+    "agent_b": 5
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 190,
+    "agent_b": 244
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1,
+      4
+    ],
+    "agent_a_wh": 1019.18,
+    "agent_b_wh": 935.5,
+    "total_wh": 1954.68,
+    "per_gpu": {
+      "0": {
+        "wh": 1019.18,
+        "vram_peak_mib": 131151
+      },
+      "1": {
+        "wh": 419.52,
+        "vram_peak_mib": 128947
+      },
+      "4": {
+        "wh": 515.98,
+        "vram_peak_mib": 128947
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.13487,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:44:47",
+  "judge_model": "deepseek-v4-flash"
+}

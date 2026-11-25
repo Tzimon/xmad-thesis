@@ -1,0 +1,27 @@
+{
+  "run_id": "P3-073",
+  "state": "done",
+  "started": "2026-10-07T18:54:52",
+  "node": "gpu-node",
+  "gpus_agent_a": [
+    4
+  ],
+  "gpus_agent_b": [
+    5
+  ],
+  "ports": {
+    "a": 8020,
+    "b": 8021,
+    "mcp": 8025
+  },
+  "running_at_the_same_time": [
+    "P3-061",
+    "P3-072"
+  ],
+  "attempts": 1,
+  "message": "",
+  "models_ready_after_s": 45.0,
+  "finished": "2026-10-07T19:24:19",
+  "duration_min": 29.5,
+  "judged": "2026-10-08T09:01:50"
+}

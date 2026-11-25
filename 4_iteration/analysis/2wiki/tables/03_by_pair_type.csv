@@ -1,0 +1,12 @@
+grouping,group,n_pairs,delta_em_mean,delta_em_min,delta_em_max,share_pairs_better,delta_f1_mean,n_nominal_better,n_significant_better,n_significant_worse,jaccard_r1_mean
+pair_type,DxD,19,-0.0035,-0.028,0.051,0.32,-0.0018,2,2,2,0.812
+pair_type,DxM,21,-0.0089,-0.031,0.006,0.29,-0.009,0,0,3,0.836
+pair_type,MxM,6,-0.0095,-0.029,0.0,0.0,-0.0128,0,0,1,0.862
+same_vendor,False,16,-0.0111,-0.031,0.039,0.19,-0.012,1,1,5,0.795
+same_vendor,True,30,-0.0044,-0.027,0.051,0.3,-0.0036,1,1,1,0.848
+pair_type+same_vendor,DxD / False,8,-0.0071,-0.028,0.039,0.25,-0.0064,1,1,2,0.826
+pair_type+same_vendor,DxD / True,11,-0.0009,-0.018,0.051,0.36,0.0016,1,1,0,0.802
+pair_type+same_vendor,DxM / False,6,-0.0147,-0.031,0.001,0.17,-0.0165,0,0,2,0.742
+pair_type+same_vendor,DxM / True,15,-0.0065,-0.027,0.006,0.33,-0.006,0,0,1,0.873
+pair_type+same_vendor,MxM / False,2,-0.0165,-0.029,-0.004,0.0,-0.021,0,0,1,0.826
+pair_type+same_vendor,MxM / True,4,-0.006,-0.018,0.0,0.0,-0.0087,0,0,0,0.88

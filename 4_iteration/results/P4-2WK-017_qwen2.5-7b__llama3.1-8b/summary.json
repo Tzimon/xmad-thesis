@@ -1,0 +1,103 @@
+{
+  "run_id": "P4-2WK-017",
+  "label": "qwen2.5-7b__llama3.1-8b",
+  "benchmark": "2wiki",
+  "agent_a": "qwen2.5-7b",
+  "agent_b": "llama3.1-8b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.567,
+  "f1": 0.6467,
+  "exact_match_consensus_only": 0.6107,
+  "source_counts": {
+    "consensus": 763,
+    "judge": 234,
+    "error": 3
+  },
+  "consensus_rate": 0.763,
+  "judge_rate": 0.234,
+  "stop_reason_counts": {
+    "consensus": 763,
+    "stalemate": 233,
+    "max_rounds": 1,
+    "error": 3
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.507,
+    "agent_b": 0.403
+  },
+  "evidence_jaccard_round1": 0.7273,
+  "evidence_recall": {
+    "agent_a_round1": 0.9002,
+    "agent_b_round1": 0.8492,
+    "union_round1": 0.9275,
+    "all_rounds": 0.955
+  },
+  "rounds_mean": 1.739,
+  "wall_time_s": {
+    "mean": 2.155,
+    "p50": 1.572,
+    "p90": 3.384,
+    "p99": 13.269,
+    "total": 2154.7
+  },
+  "tokens": {
+    "agent_a": 5389211,
+    "agent_b": 4539609
+  },
+  "tokens_split": {
+    "a_prompt": 4998417,
+    "a_completion": 390794,
+    "b_prompt": 4333542,
+    "b_completion": 206067
+  },
+  "truncated_replies": {
+    "agent_a": 1,
+    "agent_b": 1
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 1,
+    "agent_b": 1
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 1,
+    "agent_b": 1
+  },
+  "errors": {
+    "BadRequestError": 3
+  },
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1
+    ],
+    "agent_a_wh": 246.33,
+    "agent_b_wh": 158.29,
+    "total_wh": 404.62,
+    "per_gpu": {
+      "0": {
+        "wh": 246.33,
+        "vram_peak_mib": 128325
+      },
+      "1": {
+        "wh": 158.29,
+        "vram_peak_mib": 126647
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.02792,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:31:25",
+  "judge_model": "deepseek-v4-flash"
+}

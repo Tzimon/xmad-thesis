@@ -1,0 +1,83 @@
+{
+  "model": "nemotron3-nano-30b-a3b",
+  "hf_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+  "ok": false,
+  "tool_call_parser": "qwen3_xml",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-06T17:01:45",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_coder",
+      "server_started": true,
+      "load_s": 85.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"k\": 3, \"query\": \"Scott Derrickson nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": true,
+        "pass": false,
+        "final_lines": [],
+        "extra_searches_before_answer": 6,
+        "extra_search_queries": [
+          "{\"query\": \"Scott Derrickson nationality\"}",
+          "{\"query\": \"Ed Wood nationality\"}",
+          "{\"query\": \"Scott Derrickson American\"}",
+          "{\"query\": \"Ed Wood American\"}",
+          "{\"query\": \"Scott Derrickson nationality American\"}",
+          "{\"query\": \"Ed Wood nationality American\"}"
+        ],
+        "last_content": "",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 30,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "tool_call_parser": "qwen3_xml",
+      "server_started": true,
+      "load_s": 65.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"k\": 3, \"query\": \"Scott Derrickson nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": true,
+        "pass": false,
+        "final_lines": [],
+        "extra_searches_before_answer": 6,
+        "extra_search_queries": [
+          "{\"query\": \"Scott Derrickson nationality\"}",
+          "{\"query\": \"Ed Wood nationality\"}",
+          "{\"query\": \"Scott Derrickson American\"}",
+          "{\"query\": \"Ed Wood American\"}",
+          "{\"query\": \"Scott Derrickson nationality American\"}",
+          "{\"query\": \"Ed Wood nationality American\"}"
+        ],
+        "last_content": "",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 30,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

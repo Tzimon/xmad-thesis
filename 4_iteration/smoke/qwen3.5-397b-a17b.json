@@ -1,0 +1,53 @@
+{
+  "model": "qwen3.5-397b-a17b",
+  "hf_id": "Qwen/Qwen3.5-397B-A17B-FP8",
+  "ok": true,
+  "tool_call_parser": "qwen3_xml",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-24T14:06:48",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_coder",
+      "server_started": false,
+      "log_tail": "[rank0]:W1024 13:29:00.533000 341736 torch/_inductor/triton_bundler.py:242]     compile_result.reload_cubin_path()\n[rank0]:W1024 13:29:00.533000 341736 torch/_inductor/triton_bundler.py:242]   File \"/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/torch/_inductor/runtime/triton_heuristics.py\", line 2592, in reload_cubin_path\n[rank0]:W1024 13:29:00.533000 341736 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(\n[rank0]:W1024 13:29:00.533000 341736 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/0/6TNY4VQLTX4AFJNMXFZNMTMNA35X3FWAQUF3NFCBMOFVRYUJJXOA/triton_red_fused__to_copy_add_fused_add_rms_norm_3.cubin')\n(Worker_TP1 pid=341737) INFO 10-24 13:29:00 [caching.py:342] reconstructed serializable fn from standalone compile artifacts. num_artifacts=19 num_submods=61\n(Worker_TP0 pid=341736) INFO 10-24 13:29:00 [caching.py:342] reconstructed serializable fn from standalone compile artifacts. num_artifacts=19 num_submods=61\n(Worker_TP2 pid=341738) INFO 10-24 13:29:00 [caching.py:342] reconstructed serializable fn from standalone compile artifacts. num_artifacts=19 num_submods=61\n(Worker_TP3 pid=341739) INFO 10-24 13:29:00 [caching.py:342] reconstructed serializable fn from standalone compile artifacts. num_artifacts=19 num_submods=61\n(Worker_TP2 pid=341738) INFO 10-24 13:29:00 [decorators.py:312] Directly load AOT compilation from path /home/users/spitzer/.cache/vllm/torch_compile_cache/torch_aot_compile/9fb3a2b7002f6705cbe47755e856d268f130d04db0ea973baacd2062ed7d6d81/rank_2_0/model\n(Worker_TP0 pid=341736) INFO 10-24 13:29:00 [decorators.py:312] Directly load AOT compilation from path /home/users/spitzer/.cache/vllm/torch_compile_cache/torch_aot_compile/9fb3a2b7002f6705cbe47755e856d268f130d04db0ea973baacd2062ed7d6d81/rank_0_0/model\n(Worker_TP0 pid=341736) INFO 10-24 13:29:00 [monitor.py:53] torch.compile took 2.32 s in total\n(Worker_TP1 pid=341737) INFO 10-24 13:29:00 [decorators.py:312] Directly load AOT compilation from path /home/users/spitzer/.cache/vllm/torch_compile_cache/torch_aot_compile/9fb3a2b7002f6705cbe47755e856d268f130d04db0ea973baacd2062ed7d6d81/rank_1_0/model\n(Worker_TP3 pid=341739) INFO 10-24 13:29:00 [decorators.py:312] Directly load AOT compilation from path /home/users/spitzer/.cache/vllm/torch_compile_cache/torch_aot_compile/9fb3a2b7002f6705cbe47755e856d268f130d04db0ea973baacd2062ed7d6d81/rank_3_0/model\n(Worker_TP0 pid=341736) WARNING 10-24 13:29:25 [fused_moe.py:1163] Using default MoE config. Performance might be sub-optimal! Config file not found at /path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/vllm/model_executor/layers/fused_moe/configs/E=512,N=256,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json\n(Worker_TP0 pid=341736) INFO 10-24 13:29:26 [monitor.py:81] Initial profiling/warmup run took 25.31 s\n"
+    },
+    {
+      "tool_call_parser": "qwen3_xml",
+      "server_started": true,
+      "load_s": 2195.3,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\"}",
+          "{\"query\": \"Ed Wood nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: The search results explicitly state that Scott Derrickson is American and Ed Wood is American, confirming they share the same nationality.",
+          "Final answer: Yes"
+        ],
+        "extra_searches_before_answer": 0,
+        "extra_search_queries": [],
+        "last_content": " writer, producer, and director.\n\nBoth individuals are identified as American. Therefore, they are of the same nationality.\n\nReasoning summary: The search results explicitly state that Scott Derrickson is American and Ed Wood is American, confirming they share the same nationality.\nFinal answer: Yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 106,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

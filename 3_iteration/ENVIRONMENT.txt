@@ -1,0 +1,9 @@
+Phase 3 environment, created 2026-10-05T15:04:45-05:00 on the login node
+venv: /path/to/workspace/venvs/vllm-p3
+Python 3.11.7
+vllm 0.31.0
+torch 2.13.0+cu130 cuda 13.0
+transformers 5.17.0
+fastmcp 4.0.11
+openai 3.24.0
+NVIDIA H200, 595.58.03

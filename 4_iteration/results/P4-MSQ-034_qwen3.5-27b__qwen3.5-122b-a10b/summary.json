@@ -1,0 +1,103 @@
+{
+  "run_id": "P4-MSQ-034",
+  "label": "qwen3.5-27b__qwen3.5-122b-a10b",
+  "benchmark": "musique",
+  "agent_a": "qwen3.5-27b",
+  "agent_b": "qwen3.5-122b-a10b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.528,
+  "f1": 0.6363,
+  "exact_match_consensus_only": 0.5491,
+  "source_counts": {
+    "consensus": 936,
+    "judge": 64
+  },
+  "consensus_rate": 0.936,
+  "judge_rate": 0.064,
+  "stop_reason_counts": {
+    "consensus": 936,
+    "stalemate": 64
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.507,
+    "agent_b": 0.451
+  },
+  "evidence_jaccard_round1": 0.7656,
+  "evidence_recall": {
+    "agent_a_round1": 0.9193,
+    "agent_b_round1": 0.9223,
+    "union_round1": 0.9531,
+    "all_rounds": 0.9694
+  },
+  "rounds_mean": 1.494,
+  "wall_time_s": {
+    "mean": 23.675,
+    "p50": 8.756,
+    "p90": 60.648,
+    "p99": 187.265,
+    "total": 23675.4
+  },
+  "tokens": {
+    "agent_a": 17367283,
+    "agent_b": 20584793
+  },
+  "tokens_split": {
+    "a_prompt": 15973087,
+    "a_completion": 1394196,
+    "b_prompt": 19459506,
+    "b_completion": 1125287
+  },
+  "truncated_replies": {
+    "agent_a": 32,
+    "agent_b": 28
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 591,
+    "agent_b": 804
+  },
+  "no_answer_round1": {
+    "agent_a": 1,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      2
+    ],
+    "gpus_agent_b": [
+      3,
+      6
+    ],
+    "agent_a_wh": 2828.4,
+    "agent_b_wh": 2221.19,
+    "total_wh": 5049.58,
+    "per_gpu": {
+      "2": {
+        "wh": 2828.4,
+        "vram_peak_mib": 129705
+      },
+      "3": {
+        "wh": 1104.93,
+        "vram_peak_mib": 128657
+      },
+      "6": {
+        "wh": 1116.25,
+        "vram_peak_mib": 128657
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.34842,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:16:43",
+  "judge_model": "deepseek-v4-flash"
+}

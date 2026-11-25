@@ -1,0 +1,42 @@
+{
+  "model": "qwen3.8-27b",
+  "hf_id": "Qwen/Qwen3.8-27B",
+  "ok": true,
+  "tool_call_parser": "qwen3_xml",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-05T15:34:54",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_xml",
+      "server_started": true,
+      "load_s": 105.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson director nationality\"}",
+          "{\"query\": \"Ed Wood filmmaker nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: The knowledge base states Scott Derrickson is an American director and Ed Wood was an American filmmaker. Both share the same nationality.",
+          "Final answer: Yes"
+        ],
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 42,
+        "finish_reason": "stop",
+        "made_another_tool_call": false
+      }
+    }
+  ]
+}

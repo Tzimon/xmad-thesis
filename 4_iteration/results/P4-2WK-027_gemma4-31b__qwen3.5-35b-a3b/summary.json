@@ -1,0 +1,98 @@
+{
+  "run_id": "P4-2WK-027",
+  "label": "gemma4-31b__qwen3.5-35b-a3b",
+  "benchmark": "2wiki",
+  "agent_a": "gemma4-31b",
+  "agent_b": "qwen3.5-35b-a3b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.696,
+  "f1": 0.776,
+  "exact_match_consensus_only": 0.7259,
+  "source_counts": {
+    "consensus": 934,
+    "judge": 66
+  },
+  "consensus_rate": 0.934,
+  "judge_rate": 0.066,
+  "stop_reason_counts": {
+    "consensus": 934,
+    "stalemate": 66
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.69,
+    "agent_b": 0.729
+  },
+  "evidence_jaccard_round1": 0.8766,
+  "evidence_recall": {
+    "agent_a_round1": 0.9915,
+    "agent_b_round1": 0.9928,
+    "union_round1": 0.9965,
+    "all_rounds": 0.9965
+  },
+  "rounds_mean": 1.182,
+  "wall_time_s": {
+    "mean": 10.75,
+    "p50": 8.456,
+    "p90": 19.17,
+    "p99": 42.669,
+    "total": 10749.5
+  },
+  "tokens": {
+    "agent_a": 3761232,
+    "agent_b": 5918929
+  },
+  "tokens_split": {
+    "a_prompt": 3553420,
+    "a_completion": 207812,
+    "b_prompt": 5556740,
+    "b_completion": 362189
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 8
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 66,
+    "agent_b": 117
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      4
+    ],
+    "gpus_agent_b": [
+      7
+    ],
+    "agent_a_wh": 780.26,
+    "agent_b_wh": 456.53,
+    "total_wh": 1236.79,
+    "per_gpu": {
+      "4": {
+        "wh": 780.26,
+        "vram_peak_mib": 130427
+      },
+      "7": {
+        "wh": 456.53,
+        "vram_peak_mib": 127123
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.08534,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:38:12",
+  "judge_model": "deepseek-v4-flash"
+}

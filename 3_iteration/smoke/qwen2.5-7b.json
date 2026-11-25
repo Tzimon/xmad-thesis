@@ -1,0 +1,41 @@
+{
+  "model": "qwen2.5-7b",
+  "hf_id": "Qwen/Qwen2.5-7B-Instruct",
+  "ok": true,
+  "tool_call_parser": "hermes",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-06T02:47:17",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "hermes",
+      "server_started": true,
+      "load_s": 210.1,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 3}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: Both Scott Derrickson and Ed Wood are explicitly identified as American in the search results.",
+          "Final answer: yes"
+        ],
+        "extra_searches_before_answer": 2,
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 42,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

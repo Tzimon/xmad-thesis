@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-06T16:16:33",
+  "reason": "protocol v2 (forced final answer via fixed prompt without tools; missing answers are no consensus; invalid tool calls dropped)",
+  "v1_questions": 7,
+  "rerun_questions": 0,
+  "kept_questions": 7,
+  "kept_fraction": 1.0,
+  "v1_energy_agent_a_wh": 1.684,
+  "v1_energy_agent_b_wh": 1.015,
+  "v1_duration_min": 2.2,
+  "rerun_idx": []
+}

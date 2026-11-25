@@ -1,0 +1,47 @@
+# xmad/3_iteration/config/base.yaml
+#
+# The fixed conditions of every Phase 3 run (O1, C1.4, C1.6). phase3.py
+# combines this file with models.yaml and one entry of runs.yaml and writes the
+# result as run.yaml into the run's folder -- so every folder documents exactly
+# what was run. Change conditions HERE, never per run.
+
+dataset:
+  name: "hotpotqa/hotpot_qa"
+  config: "distractor"
+  split: "validation"
+# sample size and seed: runs.yaml -> sample (1000 questions, seed 42 = Phase 2 sample)
+
+decoding:                    # ONE block for both agents (C1.6)
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192           # generous on purpose: no answer should be cut off
+
+debate:
+  max_rounds: 10
+  force_first_search: true   # first turn of round 1 must search
+  stalemate_patience: 1
+
+turns_per_round:             # tool-call turn budget per agent and round
+  default: 6
+  no_parallel_tool_calls: 12 # models that can issue only one call per reply (as Llama in Phase 2)
+
+tools:
+  agent_tools: ["search_knowledge_base"]
+
+debate_system_prompt_file: "prompts/debate_system_prompt.txt"   # unchanged from Phase 2
+
+judge:                       # separate pass after the debates: python phase3.py judge
+  model_key: "deepseek-v4-flash"
+  prompt_file: "prompts/judge_system_prompt.txt"                # unchanged from Phase 2
+  decoding:
+    temperature: 0.0
+    top_p: 1.0
+    max_tokens: 16384        # reasoning stays on for the judge
+  parallel_requests: 16
+
+serving:
+  max_model_len: 32768       # debate prompts are short; bounds KV-cache memory
+  gpu_memory_utilization: 0.88   # leaves room for the MCP retriever on the run's first GPU
+  vllm_seed: 0
+  ready_timeout_s: 2400      # large checkpoints need several minutes to load
+  port_base: 8000            # slot s uses ports 8000+10s (agent A), +1 (agent B), +5 (MCP)

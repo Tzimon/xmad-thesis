@@ -1,0 +1,94 @@
+{
+  "run_id": "P4-2WK-010",
+  "label": "gemma4-31b__gemma4-31b",
+  "benchmark": "2wiki",
+  "agent_a": "gemma4-31b",
+  "agent_b": "gemma4-31b",
+  "homogeneous": true,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.689,
+  "f1": 0.7693,
+  "exact_match_consensus_only": 0.6967,
+  "source_counts": {
+    "consensus": 989,
+    "judge": 11
+  },
+  "consensus_rate": 0.989,
+  "judge_rate": 0.011,
+  "stop_reason_counts": {
+    "consensus": 989,
+    "stalemate": 11
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.69,
+    "agent_b": 0.688
+  },
+  "evidence_jaccard_round1": 0.9991,
+  "evidence_recall": {
+    "agent_a_round1": 0.9915,
+    "agent_b_round1": 0.9905,
+    "union_round1": 0.9915,
+    "all_rounds": 0.9915
+  },
+  "rounds_mean": 1.017,
+  "wall_time_s": {
+    "mean": 3.849,
+    "p50": 3.308,
+    "p90": 5.595,
+    "p99": 11.907,
+    "total": 3849.3
+  },
+  "tokens": {
+    "agent_a": 3383385,
+    "agent_b": 3396197
+  },
+  "tokens_split": {
+    "a_prompt": 3202212,
+    "a_completion": 181173,
+    "b_prompt": 3214984,
+    "b_completion": 181213
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 66,
+    "agent_b": 67
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      2
+    ],
+    "gpus_agent_b": [
+      2
+    ],
+    "agent_a_wh": 542.19,
+    "agent_b_wh": 0.0,
+    "total_wh": 542.19,
+    "per_gpu": {
+      "2": {
+        "wh": 542.19,
+        "vram_peak_mib": 130429
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.03741,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:25:54",
+  "judge_model": "deepseek-v4-flash"
+}

@@ -1,0 +1,48 @@
+# written by phase4.py at 2026-10-29T14:06:34 -- exact configuration of this run
+run:
+  run_id: P4-MSQ-056
+  label: ministral3-8b__ministral3-14b
+  n_questions: 1000
+  seed: 42
+dataset:
+  name: musique
+  config: answerable
+  split: dev
+agents:
+  agent_a:
+    model_key: ministral3-8b
+    alias: ministral3-8b
+    url: http://127.0.0.1:8020/v1
+    gpus:
+    - 6
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+  agent_b:
+    model_key: ministral3-14b
+    alias: ministral3-14b
+    url: http://127.0.0.1:8021/v1
+    gpus:
+    - 7
+    supports_parallel_tool_calls: true
+    max_turns_per_round: 6
+    request_extra_body: {}
+    system_prompt_suffix: ''
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 8192
+debate:
+  max_rounds: 10
+  force_first_search: true
+  stalemate_patience: 1
+tools:
+  mcp_url: http://127.0.0.1:8025/mcp
+  agent_tools:
+  - search_knowledge_base
+debate_system_prompt_file: prompts/debate_system_prompt.txt
+benchmark: musique
+block: D_size_mistral
+priority: should
+replicate: 1

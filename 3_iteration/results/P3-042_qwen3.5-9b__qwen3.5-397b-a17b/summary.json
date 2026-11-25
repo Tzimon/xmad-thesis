@@ -1,0 +1,100 @@
+{
+  "run_id": "P3-042",
+  "label": "qwen3.5-9b__qwen3.5-397b-a17b",
+  "agent_a": "qwen3.5-9b",
+  "agent_b": "qwen3.5-397b-a17b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.646,
+  "f1": 0.7951,
+  "exact_match_consensus_only": 0.666,
+  "source_counts": {
+    "consensus": 955,
+    "judge": 45
+  },
+  "consensus_rate": 0.955,
+  "judge_rate": 0.045,
+  "stop_reason_counts": {
+    "consensus": 955,
+    "stalemate": 45
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.622,
+    "agent_b": 0.647
+  },
+  "evidence_jaccard_round1": 0.8201,
+  "rounds_mean": 1.197,
+  "wall_time_s": {
+    "mean": 4.189,
+    "p50": 1.707,
+    "p90": 7.132,
+    "p99": 55.863,
+    "total": 4189.4
+  },
+  "tokens": {
+    "agent_a": 4734261,
+    "agent_b": 4394482
+  },
+  "truncated_replies": {
+    "agent_a": 19,
+    "agent_b": 2
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 34,
+    "agent_b": 51
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      3
+    ],
+    "gpus_agent_b": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "agent_a_wh": 466.14,
+    "agent_b_wh": 1154.68,
+    "total_wh": 1620.82,
+    "per_gpu": {
+      "3": {
+        "wh": 466.14,
+        "vram_peak_mib": 128711
+      },
+      "4": {
+        "wh": 294.12,
+        "vram_peak_mib": 128083
+      },
+      "5": {
+        "wh": 282.73,
+        "vram_peak_mib": 128083
+      },
+      "6": {
+        "wh": 289.35,
+        "vram_peak_mib": 128083
+      },
+      "7": {
+        "wh": 288.47,
+        "vram_peak_mib": 128085
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.11184,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-08T08:44:35",
+  "judge_model": "deepseek-v4-flash"
+}

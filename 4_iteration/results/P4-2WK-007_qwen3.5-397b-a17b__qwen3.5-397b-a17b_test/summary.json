@@ -1,0 +1,109 @@
+{
+  "run_id": "P4-2WK-007",
+  "label": "qwen3.5-397b-a17b__qwen3.5-397b-a17b",
+  "benchmark": "2wiki",
+  "agent_a": "qwen3.5-397b-a17b",
+  "agent_b": "qwen3.5-397b-a17b",
+  "homogeneous": true,
+  "questions": 30,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.8667,
+  "f1": 0.8667,
+  "exact_match_consensus_only": 0.8667,
+  "source_counts": {
+    "consensus": 30
+  },
+  "consensus_rate": 1.0,
+  "judge_rate": 0.0,
+  "stop_reason_counts": {
+    "consensus": 30
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.8333,
+    "agent_b": 0.8667
+  },
+  "evidence_jaccard_round1": 0.9821,
+  "evidence_recall": {
+    "agent_a_round1": 0.9917,
+    "agent_b_round1": 1.0,
+    "union_round1": 1.0,
+    "all_rounds": 1.0
+  },
+  "rounds_mean": 1.033,
+  "wall_time_s": {
+    "mean": 5.933,
+    "p50": 3.696,
+    "p90": 16.393,
+    "p99": 17.984,
+    "total": 178.0
+  },
+  "tokens": {
+    "agent_a": 130109,
+    "agent_b": 131168
+  },
+  "tokens_split": {
+    "a_prompt": 117340,
+    "a_completion": 12769,
+    "b_prompt": 117565,
+    "b_completion": 13603
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 2,
+    "agent_b": 1
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "gpus_agent_b": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "agent_a_wh": 48.5,
+    "agent_b_wh": 0.0,
+    "total_wh": 48.5,
+    "per_gpu": {
+      "2": {
+        "wh": 11.8,
+        "vram_peak_mib": 129529
+      },
+      "3": {
+        "wh": 11.92,
+        "vram_peak_mib": 127757
+      },
+      "4": {
+        "wh": 12.69,
+        "vram_peak_mib": 127757
+      },
+      "5": {
+        "wh": 12.09,
+        "vram_peak_mib": 127757
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.00335,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-24T17:07:03"
+}

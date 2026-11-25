@@ -1,0 +1,47 @@
+agent_a,agent_b,pair_type,same_vendor,run_id_hotpotqa,run_id_musique,run_id_2wiki,delta_em_hotpotqa,q_bh_hotpotqa,verdict_hotpotqa,delta_em_musique,q_bh_musique,verdict_musique,delta_em_2wiki,q_bh_2wiki,verdict_2wiki
+llama3.1-8b,llama3.3-70b,DxD,True,P3-083,P4-MSQ-064,P4-2WK-064,0.039,0.00483,significant better,0.056,0.0,significant better,0.051,0.00046,significant better
+qwen3.5-9b,gemma4-12b,DxD,False,P3-079,P4-MSQ-060,P4-2WK-060,0.014,0.46556,better,0.04,0.01138,significant better,-0.002,1.0,worse
+qwen3.5-4b,qwen3.5-9b,DxD,True,P3-037,P4-MSQ-030,P4-2WK-030,0.013,0.46556,better,0.038,0.01871,significant better,0.0,1.0,equal
+ministral3-14b,gemma4-12b,DxD,False,P3-080,P4-MSQ-061,P4-2WK-061,-0.001,1.0,worse,0.033,0.02268,significant better,0.004,0.88172,better
+gemma4-e4b,gemma4-12b,DxD,True,P3-068,P4-MSQ-051,P4-2WK-051,0.015,0.30728,nominal better,0.032,0.02268,significant better,-0.009,0.53784,worse
+llama3.3-70b,mistral-small4-119b,DxM,False,P3-061,P4-MSQ-045,P4-2WK-045,0.008,0.93242,better,0.031,0.02268,significant better,-0.003,0.94287,worse
+qwen3.5-27b,qwen3.8-27b,DxD,True,P3-084,P4-MSQ-065,P4-2WK-065,0.012,0.46556,better,0.031,0.0299,significant better,-0.017,0.14317,nominal worse
+qwen3.5-27b,qwen3.5-35b-a3b,DxM,True,P3-019,P4-MSQ-018,P4-2WK-018,0.013,0.22578,nominal better,0.026,0.02268,significant better,0.006,0.71162,better
+qwen3.5-9b,ministral3-8b,DxD,False,P3-077,P4-MSQ-058,P4-2WK-058,-0.001,1.0,worse,0.024,0.08849,nominal better,-0.013,0.26618,worse
+gemma4-31b,qwen3.5-35b-a3b,DxM,False,P3-032,P4-MSQ-027,P4-2WK-027,-0.004,0.93242,worse,0.023,0.05468,nominal better,-0.031,0.00621,significant worse
+qwen2.5-7b,llama3.1-8b,DxD,False,P3-018,P4-MSQ-017,P4-2WK-017,0.047,0.00046,significant better,0.022,0.21996,better,0.039,0.01158,significant better
+qwen3.5-27b,qwen3.5-122b-a10b,DxM,True,P3-041,P4-MSQ-034,P4-2WK-034,0.006,0.93242,better,0.019,0.21238,better,-0.004,0.84694,worse
+ministral3-14b,mistral-small4-119b,DxM,True,P3-022,P4-MSQ-021,P4-2WK-021,0.009,0.87649,better,0.014,0.52372,better,-0.011,0.53282,worse
+qwen3.5-4b,qwen3.5-35b-a3b,DxM,True,P3-063,P4-MSQ-046,P4-2WK-046,0.003,0.93242,better,0.012,0.58052,better,0.001,1.0,better
+qwen3.5-9b,qwen3.5-35b-a3b,DxM,True,P3-040,P4-MSQ-033,P4-2WK-033,0.022,0.09108,nominal better,0.011,0.69918,better,-0.009,0.61743,worse
+qwen3.5-9b,qwen3.5-27b,DxD,True,P3-038,P4-MSQ-031,P4-2WK-031,0.01,0.57382,better,0.01,0.69918,better,-0.011,0.30082,worse
+qwen3.5-35b-a3b,gemma4-26b-a4b,MxM,False,P3-027,P4-MSQ-025,P4-2WK-025,0.01,0.57382,better,0.008,0.7135,better,-0.029,0.00708,significant worse
+qwen3.5-27b,gemma4-26b-a4b,DxM,False,P3-030,P4-MSQ-026,P4-2WK-026,0.001,1.0,better,0.008,0.7135,better,-0.029,0.00345,significant worse
+qwen3.5-4b,qwen3.5-27b,DxD,True,P3-039,P4-MSQ-032,P4-2WK-032,0.004,0.93242,better,0.008,0.7135,better,0.006,0.71162,better
+ministral3-8b,ministral3-14b,DxD,True,P3-073,P4-MSQ-056,P4-2WK-056,0.004,0.93242,better,0.008,0.7135,better,0.004,0.90452,better
+muse-glimmer-30b,qwen3.5-35b-a3b,DxM,False,P3-034,P4-MSQ-028,P4-2WK-028,-0.001,1.0,worse,0.007,0.7135,better,-0.014,0.2928,worse
+qwen3.5-27b,gemma4-31b,DxD,False,P3-024,P4-MSQ-022,P4-2WK-022,0.009,0.69429,better,0.006,0.7362,better,-0.024,0.01209,significant worse
+gemma4-31b,gemma4-26b-a4b,DxM,True,P3-021,P4-MSQ-020,P4-2WK-020,0.002,0.93242,better,0.005,0.73061,better,-0.004,0.82993,worse
+qwen3.5-4b,nemotron3-nano-4b,DxD,False,P3-078,P4-MSQ-059,P4-2WK-059,0.003,0.93242,better,0.002,0.95189,better,-0.028,0.00475,significant worse
+gemma4-12b,gemma4-31b,DxD,True,P3-069,P4-MSQ-052,P4-2WK-052,0.004,0.93242,better,-0.001,1.0,worse,-0.005,0.75048,worse
+ministral3-8b,mistral-small4-119b,DxM,True,P3-074,P4-MSQ-057,P4-2WK-057,0.007,0.93242,better,-0.002,0.95189,worse,-0.027,0.0207,significant worse
+muse-glimmer-30b,llama3.3-70b,DxD,True,P3-082,P4-MSQ-063,P4-2WK-063,0.005,0.93242,better,-0.002,0.95189,worse,0.003,0.88172,better
+qwen3.5-35b-a3b,qwen3.5-122b-a10b,MxM,True,P3-067,P4-MSQ-050,P4-2WK-050,-0.001,1.0,worse,-0.003,0.91733,worse,-0.003,0.94287,worse
+qwen3.8-27b,qwen3.8-flash-next,DxM,True,P3-020,P4-MSQ-019,P4-2WK-019,0.009,0.57382,better,-0.006,0.73061,worse,-0.02,0.07756,nominal worse
+gemma4-e4b,gemma4-31b,DxD,True,P3-070,P4-MSQ-053,P4-2WK-053,0.002,0.98387,better,-0.006,0.73061,worse,-0.018,0.05801,nominal worse
+gemma4-12b,gemma4-26b-a4b,DxM,True,P3-072,P4-MSQ-055,P4-2WK-055,0.006,0.93242,better,-0.006,0.73061,worse,0.006,0.75048,better
+qwen3.5-27b,muse-glimmer-30b,DxD,False,P3-025,P4-MSQ-023,P4-2WK-023,0.0,1.0,equal,-0.007,0.7135,worse,-0.017,0.09488,nominal worse
+qwen3.5-397b-a17b,qwen3.8-flash-next,MxM,True,P3-085,P4-MSQ-066,P4-2WK-066,0.015,0.15336,nominal better,-0.007,0.7135,worse,-0.018,0.09488,nominal worse
+qwen3.5-27b,qwen3.5-397b-a17b,DxM,True,P3-043,P4-MSQ-036,P4-2WK-036,-0.01,0.46556,worse,-0.008,0.7135,worse,-0.005,0.83825,worse
+llama3.3-70b,qwen3.5-122b-a10b,DxM,False,P3-060,P4-MSQ-044,P4-2WK-044,-0.003,0.93242,worse,-0.009,0.7135,worse,0.001,1.0,better
+gemma4-e4b,gemma4-26b-a4b,DxM,True,P3-071,P4-MSQ-054,P4-2WK-054,0.018,0.09108,nominal better,-0.009,0.7135,worse,-0.012,0.2928,worse
+qwen3.5-35b-a3b,qwen3.5-397b-a17b,MxM,True,P3-044,P4-MSQ-037,P4-2WK-037,-0.005,0.93242,worse,-0.012,0.52372,worse,-0.003,0.94287,worse
+qwen3.5-4b,qwen3.5-122b-a10b,DxM,True,P3-064,P4-MSQ-047,P4-2WK-047,-0.004,0.93242,worse,-0.012,0.56138,worse,0.005,0.83825,better
+qwen3.5-4b,qwen3.5-397b-a17b,DxM,True,P3-065,P4-MSQ-048,P4-2WK-048,-0.009,0.57382,worse,-0.012,0.56138,worse,0.001,1.0,better
+qwen3.5-9b,qwen3.5-122b-a10b,DxM,True,P3-066,P4-MSQ-049,P4-2WK-049,0.003,0.93242,better,-0.017,0.25123,worse,-0.012,0.2928,worse
+gemma4-31b,muse-glimmer-30b,DxD,False,P3-026,P4-MSQ-024,P4-2WK-024,-0.011,0.58052,worse,-0.028,0.04396,significant worse,-0.016,0.12334,nominal worse
+qwen3.5-9b,qwen3.5-397b-a17b,DxM,True,P3-042,P4-MSQ-035,P4-2WK-035,-0.006,0.93242,worse,-0.028,0.0299,significant worse,-0.013,0.10421,nominal worse
+muse-glimmer-30b,gemma4-26b-a4b,DxM,False,P3-035,P4-MSQ-029,P4-2WK-029,0.003,0.93242,better,-0.029,0.03305,significant worse,-0.012,0.2928,worse
+qwen3.5-122b-a10b,qwen3.5-397b-a17b,MxM,True,P3-045,P4-MSQ-038,P4-2WK-038,-0.004,0.93242,worse,-0.032,0.01871,significant worse,0.0,1.0,equal
+llama3.1-8b,muse-glimmer-30b,DxD,True,P3-081,P4-MSQ-062,P4-2WK-062,-0.015,0.30728,worse,-0.037,0.0069,significant worse,-0.014,0.11024,nominal worse
+qwen3.5-122b-a10b,mistral-small4-119b,MxM,False,P3-057,P4-MSQ-043,P4-2WK-043,-0.004,0.93242,worse,-0.039,0.00414,significant worse,-0.004,0.88172,worse

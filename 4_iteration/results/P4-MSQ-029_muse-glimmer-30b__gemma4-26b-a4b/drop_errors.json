@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-31T17:16:39",
+  "reason": "MCP connection lost",
+  "rows_before": 156,
+  "removed": 1,
+  "removed_idx": [
+    200
+  ]
+}

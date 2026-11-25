@@ -1,0 +1,82 @@
+idx,id,benchmark,q_meta,question,gold,gold_answers,pred,source,em,f1,rounds,consensus_round,stop_reason,judge_confidence,wall_time_s,a_r1_pred,a_r1_em,a_r1_f1,b_r1_pred,b_r1_em,b_r1_f1,r1_jaccard,a_r1_recall,b_r1_recall,r1_recall_union,recall_all_rounds,n_gold_paragraphs,a_llm_calls,a_tool_calls,a_total_tokens,a_prompt_tokens,a_completion_tokens,a_truncated,a_api_retries,a_forced_final,a_invalid_tool_calls,b_llm_calls,b_tool_calls,b_total_tokens,b_prompt_tokens,b_completion_tokens,b_truncated,b_api_retries,b_forced_final,b_invalid_tool_calls,error,error_detail
+91,2hop__159215_779396,musique,"{""hops"": 2}",Where was the person who wrote about the rioting being a dividing factor in Birmingham educated?,University of Glasgow,"[""University of Glasgow""]",University of Glasgow,consensus,1,1.0,1,1,consensus,,102.982,University of Glasgow,1,1.0,University of Glasgow,1,1.0,1.0,1.0,1.0,1.0,1.0,2,6,5,10532,9388,1144,0,0,0,0,6,5,10764,9524,1240,0,0,0,0,,
+135,2hop__62823_654855,musique,"{""hops"": 2}","What political party was the candidate who garnered a million votes during the 1920 election despite being in prison, a member of?",Socialist Party of America,"[""Socialist Party of America"", ""Democrat"", ""Democratic Party""]",Socialist Party,consensus,0,0.6667,1,1,consensus,,9.837,Socialist Party,0,0.6667,Socialist Party,0,0.6667,0.5,0.5,0.5,0.5,0.5,2,2,1,2085,1929,156,0,0,0,0,2,1,1997,1839,158,0,0,0,0,,
+138,2hop__742831_156034,musique,"{""hops"": 2}",Of which river is the river Kichi Sipi Bridge crosses a tributary?,Hudson's Bay,"[""Hudson's Bay"", ""Hudson Bay"", ""HB""]",None,consensus,0,0.0,3,3,consensus,,117.912,Nelson River,0,0.0,Hudson Bay,1,1.0,0.75,0.5,1.0,1.0,1.0,2,8,6,23133,15674,7459,0,0,0,0,10,9,23010,17729,5281,0,0,0,0,,
+194,2hop__85713_72187,musique,"{""hops"": 2}","The actor who played Thelma in ""Thelma and Louise"" also played which character in ""A League of Their Own""?",Dottie Hinson,"[""Dottie Hinson""]",Dottie Hinson,consensus,1,1.0,1,1,consensus,,2.598,Dottie Hinson,1,1.0,Dottie Hinson,1,1.0,1.0,1.0,1.0,1.0,1.0,2,3,2,3177,2996,181,0,0,0,0,3,2,3177,2996,181,0,0,0,0,,
+200,2hop__38828_89399,musique,"{""hops"": 2}",Who voices the character in Spongebob Squarepants who is named after a glowing species found in some beaches in Portugal?,Mr. Lawrence,"[""Mr. Lawrence"", ""Doug Lawrence""]",Mr. Lawrence,consensus,1,1.0,1,1,consensus,,4.578,Mr. Lawrence,1,1.0,Mr. Lawrence,1,1.0,0.7143,0.5,1.0,1.0,1.0,2,4,3,7230,6960,270,0,0,0,0,5,4,10263,9971,292,0,0,0,0,,
+352,2hop__853227_68633,musique,"{""hops"": 2}",Arthur Marryatt is a member of a sports association that has who as president?,Thomas Bach,"[""Thomas Bach""]",Cannot be determined from the evidence,consensus,0,0.0,2,2,consensus,,38.463,Cannot be determined from the evidence,0,0.0,Arthur Marryatt,0,0.0,0.8333,1.0,1.0,1.0,1.0,2,9,9,17372,16606,766,0,0,1,0,9,9,20991,16823,4168,0,0,1,0,,
+363,2hop__77518_548781,musique,"{""hops"": 2}",Where was the president born on the fourth of July born?,Plymouth Notch,"[""Plymouth Notch""]","Plymouth Notch, Vermont",consensus,0,0.8,1,1,consensus,,15.883,"Plymouth Notch, Vermont",0,0.8,"Plymouth Notch, Vermont",0,0.8,1.0,1.0,1.0,1.0,1.0,2,6,5,14154,13216,938,0,0,0,0,6,5,14884,13429,1455,0,0,0,0,,
+503,2hop__362912_97805,musique,"{""hops"": 2}",Which was did the operator of the Jurmo class landing craft serve in?,Winter War,"[""Winter War""]",Winter War,consensus,1,1.0,1,1,consensus,,8.46,Winter War,1,1.0,Winter War,1,1.0,1.0,1.0,1.0,1.0,1.0,2,7,6,12725,12123,602,0,0,1,0,7,6,12628,12122,506,0,0,1,0,,
+533,2hop__6744_6731,musique,"{""hops"": 2}",What two dialects are included in the other pattern other vowels follow?,Northwestern Catalan and Valencian,"[""Northwestern Catalan and Valencian""]",Northwestern Catalan and Valencian,consensus,1,1.0,1,1,consensus,,9.004,Northwestern Catalan and Valencian,1,1.0,Northwestern Catalan and Valencian,1,1.0,1.0,1.0,1.0,1.0,1.0,2,5,4,6404,5727,677,0,0,0,0,5,4,6556,5727,829,0,0,0,0,,
+656,2hop__158275_35739,musique,"{""hops"": 2}",When was one internet browser's version of Windows 8 made accessible?,September 2013,"[""September 2013""]",September 2013,consensus,1,1.0,1,1,consensus,,1.875,September 2013,1,1.0,September 2013,1,1.0,1.0,0.5,0.5,0.5,0.5,2,2,1,1904,1740,164,0,0,0,0,2,1,1904,1740,164,0,0,0,0,,
+717,2hop__85993_512508,musique,"{""hops"": 2}",What was the person who discovered that nuclei of atoms contained neutrons with no charge a participant in?,Manhattan Project,"[""Manhattan Project""]",the Manhattan Project,consensus,1,1.0,1,1,consensus,,3.288,the Manhattan Project,1,1.0,the Manhattan Project,1,1.0,1.0,1.0,1.0,1.0,1.0,2,3,2,4053,3837,216,0,0,0,0,3,2,4054,3837,217,0,0,0,0,,
+822,2hop__386236_350892,musique,"{""hops"": 2}",Where was Osbert Sitwell's sibling educated?,Eton College,"[""Eton College""]",,pending_judge,0,0.0,3,,stalemate,,15.054,Information not available in the provided text,0,0.0,Not mentioned in the provided text,0,0.0,1.0,1.0,1.0,1.0,1.0,2,10,11,18859,17791,1068,0,0,0,0,10,11,17833,16817,1016,0,0,0,0,,
+829,2hop__35173_17335,musique,"{""hops"": 2}",When did the person who ended the Archaemenid Empire by conquest in 330 BC die?,323 BC,"[""323 BC""]",323 BC,consensus,1,1.0,1,1,consensus,,2.718,323 BC,1,1.0,323 BC,1,1.0,1.0,1.0,1.0,1.0,1.0,2,3,2,3667,3474,193,0,0,0,0,3,2,3655,3474,181,0,0,0,0,,
+982,2hop__280583_229757,musique,"{""hops"": 2}",Who is the spouse of the creator of The Mighty B?,Will Arnett,"[""Will Arnett""]",Cannot be determined from evidence,consensus,0,0.0,2,2,consensus,,10.267,Cannot be determined from the provided evidence,0,0.0,Cannot be determined from evidence,0,0.0,1.0,1.0,1.0,1.0,1.0,2,9,8,14298,13707,591,0,0,1,0,9,8,14296,13707,589,0,0,1,0,,
+996,2hop__510647_507085,musique,"{""hops"": 2}",Who is the father of the person that Crockett County is named after?,John Crockett,"[""John Crockett""]",John Crockett,consensus,1,1.0,1,1,consensus,,2.45,John Crockett,1,1.0,John Crockett,1,1.0,1.0,1.0,1.0,1.0,1.0,2,3,2,2943,2789,154,0,0,0,0,3,2,2944,2789,155,0,0,0,0,,
+1145,2hop__35445_22458,musique,"{""hops"": 2}",What is the full name of the organization that publishes he Laws of the Game?,International Federation of Association Football,"[""International Federation of Association Football"", ""FIFA""]",FIFA,consensus,1,1.0,1,1,consensus,,2.521,FIFA,1,1.0,FIFA,1,1.0,1.0,0.5,0.5,0.5,0.5,2,2,1,1801,1635,166,0,0,0,0,2,1,1773,1635,138,0,0,0,0,,
+1186,3hop1__144678_443779_52195,musique,"{""hops"": 3}",The Commission of Truth and Friendship established governments for Bustami's birth country and a second country that had who as president after declaring independence?,Francisco Guterres,"[""Francisco Guterres""]",José Ramos-Horta,consensus,0,0.0,1,1,consensus,,11.153,José Ramos-Horta,0,0.0,José Ramos-Horta,0,0.0,1.0,1.0,1.0,1.0,1.0,3,7,6,22560,21719,841,0,0,1,0,7,6,22149,21719,430,0,0,1,0,,
+1217,3hop1__632623_160713_77246,musique,"{""hops"": 3}",In the arabic dictionary what is the meaning of the word that also refers to the majority religion in India during the creation of the country where Rabwah is located?,the country of India,"[""the country of India"", ""IND"", ""IN"", ""India"", ""in"", ""Republic of India""]",Indian,consensus,0,0.0,2,2,consensus,,94.188,"**Not mentioned** or **Definition not provided**.
+But wait, what if the ""word"" is **Hindu** and the meaning is **Indian**?
+And the text ""India... Hindu regions"" implies it?
+No.
+
+Let's assume the question is correct and I am missing a snippet.
+Snippet 1: Islam...
+Snippet 2: Border...
+Snippet 3: Patel... Sardar meaning chief...
+Snippet 4: Partition...
+Snippet 5: New Delhi...
+Snippet 6: Partition...
+Snippet 7: Partition...
+No other definitions.
+The only definition is **Sardar = Chief**.
+Is it possible the question is ""What is the meaning of the word **Sardar**?"" and the rest is noise?
+""In the arabic dictionary"" -> Error (should be Persian/Urdu).
+""refers to the majority religion"" -> Error (should be 'title used in').
+If I answer ""Chief"", I am using the only definition available.
+If I answer ""Submission"", I am using outside knowledge.
+The instruction says ""base your answer only on retrieved passages"".
+So ""Submission"" is invalid.
+""Chief"" is valid based on text, but invalid based on ""Arabic"" and ""Religion"" constraints.
+""Not mentioned"" is valid based on constraints.
+But usually, these questions want the defined word.
+Maybe the ""majority religion in India"" is **Sikh**? (Sardar is Sikh title).
+But Sikh is not majority in India.
+Maybe the ""country where Rabwah is located"" is **India**? (If user thinks Rabwah is in India).
+Then majority religion is Hindu.
+Still no definition.
+
+Okay, the most likely intended answer in a flawed question setup where ""Sardar"" is the only defined term is **Chief**.
+But the ""Arabic dictionary"" and ""Religion"" parts are too specific to ignore.
+""Islam"" is the only Arabic religion word.
+If the text doesn't define it, the answer is **Not mentioned**.
+However, I will provide the reasoning that the word is Islam, but the text lacks the definition.
+Wait, could the ""meaning"" be **Submission** and the text *does* say it and I missed it?
+""Islam (Arabic: الإسلام) is the second-largest religion...""
+No.
+Okay, I'll go with **Not mentioned** or similar.
+But let's think if ""Hindu"" means something in Arabic in the text? No.
+
+Actually, there is one possibility.
+""Rabwah"" is in Pakistan.
+Majority religion in Pakistan is Islam.
+User wrote ""majority religion in India"" by mistake.
+Word: Islam.
+Meaning: **Submission** (Common knowledge, but not in text).
+If I strictly follow ""only on retrieved passages"", I cannot answer ""Submission"".
+But if the question is ""What is the meaning..."", and the text doesn't say, maybe the answer is **Islam** itself? (No).
+I will formulate the reasoning to point out the discrepancy and the lack of definition in the text, but if forced to choose the most likely intended answer despite the constraint violation (as often happens in these benchmarks), it would be ""Submission"".
+BUT, the prompt says ""base your",0,0.0149,Indian,0,0.0,1.0,0.3333,0.3333,0.3333,1.0,3,9,9,33814,24875,8939,1,0,1,0,9,10,29148,25344,3804,0,0,1,0,,
+1223,3hop1__379315_160713_77246,musique,"{""hops"": 3}","What is the Arabic dictionary meaning of the word referring to the majority religion in the area of British India, that became India when the country containing Barawal was formed?",the country of India,"[""the country of India"", ""IND"", ""IN"", ""India"", ""in"", ""Republic of India""]",river,consensus,0,0.0,1,1,consensus,,14.768,river,0,0.0,River,0,0.0,1.0,0.6667,0.6667,0.6667,0.6667,3,5,4,9756,8546,1210,0,0,0,0,5,4,9867,8546,1321,0,0,0,0,,
+1342,3hop1__617062_127905_86588,musique,"{""hops"": 3}",What is the longest home run in the history of the league that Jim Wilson's team is a part of?,582 feet (177 m),"[""582 feet (177 m)""]",,pending_judge,0,0.0,2,,stalemate,,30.615,575 feet,0,0.3333,575 feet by Babe Ruth,0,0.2222,0.8571,1.0,1.0,1.0,1.0,3,6,5,10047,9165,882,0,0,0,0,6,5,13601,10448,3153,0,0,0,0,,
+1346,3hop1__389955_132457_47686,musique,"{""hops"": 3}",Where do Greyhound buses leave from in the city where the band that recorded the album I'm Alive and on Fire formed?,Toronto Coach Terminal,"[""Toronto Coach Terminal""]",Toronto Coach Terminal (610 Bay Street),consensus,0,0.6667,1,1,consensus,,4.173,Toronto Coach Terminal (610 Bay Street),0,0.6667,Toronto Coach Terminal (610 Bay Street),0,0.6667,1.0,1.0,1.0,1.0,1.0,3,4,3,4494,4235,259,0,0,0,0,4,3,4493,4235,258,0,0,0,0,,
+1462,3hop2__132957_132798_40768,musique,"{""hops"": 3}","When did the make of Acura Legend, the company that made toyopet Master and Nissan open US assembly plants?",1981,"[""1981""]",early 1980s,consensus,0,0.0,1,1,consensus,,22.368,early 1980s,0,0.0,the early 1980s,0,0.0,0.9167,1.0,1.0,1.0,1.0,3,5,11,14699,12844,1855,0,0,0,0,5,12,15344,13801,1543,0,0,0,0,,
+1478,3hop2__792915_467331_162182,musique,"{""hops"": 3}",In what region of the country containing the Cái River is the city that has the Zone 5 Military Museum located?,South Central Coast,"[""South Central Coast""]",South Central Coast,consensus,1,1.0,1,1,consensus,,4.195,South Central Coast,1,1.0,South Central Coast,1,1.0,1.0,1.0,1.0,1.0,1.0,3,4,3,4553,4282,271,0,0,0,0,4,3,4558,4282,276,0,0,0,0,,
+1694,3hop2__127483_84553_10557,musique,"{""hops"": 3}",What was the language of Auctor of who built a european empire and was crowned emperor of the romans in 800 era later known as?,Medieval Latin,"[""Medieval Latin""]",Frankish,consensus,0,0.0,1,1,consensus,,19.056,Frankish,0,0.0,Frankish,0,0.0,1.0,0.6667,0.6667,0.6667,0.6667,3,6,5,14515,13328,1187,0,0,0,0,7,6,19728,18103,1625,0,0,1,0,,
+1840,4hop1__525129_315334_131926_87157,musique,"{""hops"": 4}","What is the direction of flow of the river by the city where the Lots More Blues, Rags and Hollers performer was formed?",rises in northern Minnesota and meanders slowly southwards,"[""rises in northern Minnesota and meanders slowly southwards"", ""Minnesota""]",South,consensus,0,0.0,1,1,consensus,,3.584,South,0,0.0,South,0,0.0,1.0,1.0,1.0,1.0,1.0,4,3,2,3466,3218,248,0,0,0,0,3,2,3452,3218,234,0,0,0,0,,
+1998,4hop3__754156_88460_30152_20999,musique,"{""hops"": 4}",How were the people from whom new coins were a proclamation of independence by the Somali Muslim Ajuran Empire expelled from the country between Thailand and A Lim's country?,The dynasty regrouped and defeated the Portuguese,"[""The dynasty regrouped and defeated the Portuguese""]",Defeated,consensus,0,0.3333,1,1,consensus,,51.782,Defeated,0,0.3333,Defeated,0,0.3333,1.0,1.0,1.0,1.0,1.0,4,3,6,9811,6072,3739,0,0,0,0,3,6,11126,6072,5054,0,0,0,0,,
+2326,3hop2__57238_1926_54362,musique,"{""hops"": 3}","Who burned down the city where Keeping Up with the Joneses is set, during the war marking the first time that the number of black people living in NYC declined?",Confederate Gen. John Bell Hood,"[""Confederate Gen. John Bell Hood""]",John Bell Hood,consensus,0,0.75,1,1,consensus,,7.151,John Bell Hood,0,0.75,John Bell Hood,0,0.75,1.0,1.0,1.0,1.0,1.0,3,7,6,14952,14515,437,0,0,1,0,7,6,14974,14515,459,0,0,1,0,,
+2353,3hop1__131820_59747_90139,musique,"{""hops"": 3}","Which star of the Real Housewives show, set in the largest city by population in the state where WEKL is located, is married to an NFL player?",Kim Zolciak,"[""Kim Zolciak""]",Kim Zolciak,consensus,1,1.0,1,1,consensus,,10.043,Kim Zolciak,1,1.0,Kim Zolciak,1,1.0,1.0,1.0,1.0,1.0,1.0,3,7,6,16070,15539,531,0,0,1,0,7,6,16012,15491,521,0,0,1,0,,
+2370,3hop1__19768_19788_15107,musique,"{""hops"": 3}",What percentage of Eritrea is estimated to adhere to the religion widely practiced in the region with the 2nd largest rain-forest in the world?,48%,"[""48%""]",48%,consensus,1,1.0,1,1,consensus,,5.369,48%,1,1.0,48%,1,1.0,0.875,1.0,1.0,1.0,1.0,3,4,3,5735,5404,331,0,0,0,0,4,3,5756,5384,372,0,0,0,0,,
+2410,3hop1__147162_131905_41948,musique,"{""hops"": 3}","Besides the body of water by the city where Erwin Speckler died, and the Irish Channel, what else was lowered in the last cold phase?",English Channel,"[""English Channel"", ""The Channel""]",English Channel,consensus,1,1.0,1,1,consensus,,5.95,English Channel,1,1.0,English Channel,1,1.0,1.0,1.0,1.0,1.0,1.0,3,4,3,5324,4905,419,0,0,0,0,4,3,5307,4907,400,0,0,0,0,,

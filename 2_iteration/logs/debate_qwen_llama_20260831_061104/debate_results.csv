@@ -1,0 +1,21 @@
+idx,id,question,gold,pred,source,em,f1,rounds,consensus_round,used_judge,judge_confidence,wall_time_s,a_llm_calls,a_tool_calls,a_total_tokens,b_llm_calls,b_tool_calls,b_total_tokens,error
+0,5a8b57f25542995d1e6f1371,Were Scott Derrickson and Ed Wood of the same nationality?,yes,yes,consensus,1,1.0,1,1,False,,6.905,3,2,2935,3,2,2514,
+1,5a8c7595554299585d9e36b6,What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?,Chief of Protocol,,error,0,0.0,0,,False,,0.757,0,0,0,0,0,0,BadRequestError
+2,5a85ea095542994775f606a8,"What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?",Animorphs,Animorphs,consensus,1,1.0,1,1,False,,1.105,2,1,1787,3,2,6534,
+3,5adbf0a255429947ff17385a,Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?,no,,error,0,0.0,0,,False,,0.619,0,0,0,0,0,0,BadRequestError
+4,5a8e3ea95542995a26add48d,"The director of the romantic comedy ""Big Stone Gap"" is based in what New York city?","Greenwich Village, New York City",Greenwich Village,judge,0,0.5714,10,,True,1.0,14.03,26,16,39990,21,11,33578,
+5,5abd94525542992ac4f382d2,2014 S/S is the debut album of a South Korean boy group that was formed by who?,YG Entertainment,YG Entertainment,consensus,1,1.0,2,2,False,,1.279,4,2,3232,4,2,3262,
+6,5a85b2d95542997b5ce40028,Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?,Eenasul Fateh,Eenasul Fateh,consensus,1,1.0,1,1,False,,0.743,2,1,1512,3,2,7424,
+7,5a87ab905542996e4f3088c1,The arena where the Lewiston Maineiacs played their home games can seat how many people?,"3,677 seated",3677,consensus,0,0.6667,1,1,False,,0.665,2,1,1495,2,1,1612,
+8,5a7bbb64554299042af8f7cc,"Who is older, Annie Morton or Terry Richardson?",Terry Richardson,,error,0,0.0,0,,False,,0.371,0,0,0,0,0,0,BadRequestError
+9,5a8db19d5542994ba4e3dd00,Are Local H and For Against both from the United States?,yes,,error,0,0.0,0,,False,,0.384,0,0,0,0,0,0,BadRequestError
+10,5a7166395542994082a3e814,"What is the name of the fight song of the university whose main campus is in Lawrence, Kansas and whose branch campuses are in the Kansas City metropolitan area?",Kansas Song,Kansas Song,consensus,1,1.0,1,1,False,,0.919,3,2,3554,3,2,5338,
+11,5a877e5d5542993e715abf7d,"What screenwriter with credits for ""Evolution"" co-wrote a film starring Nicolas Cage and Téa Leoni?",David Weissman,David Weissman,consensus,1,1.0,3,3,False,,2.962,7,4,7084,7,4,9586,
+12,5ab3b0bf5542992ade7c6e39,What year did Guns N Roses perform a promo for a movie starring Arnold Schwarzenegger as a former New York Police detective?,1999,1999,consensus,1,1.0,2,2,False,,1.819,5,3,4743,5,3,8275,
+13,5ab56e32554299637185c594,Are Random House Tower and 888 7th Avenue both used for real estate?,no,yes,consensus,0,0.0,1,1,False,,1.056,3,2,2772,3,2,10003,
+14,5ab6d09255429954757d337d,The football manager who recruited David Beckham managed Manchester United during what timeframe?,from 1986 to 2013,1986-2013,judge,0,0.0,10,,True,1.0,11.709,13,3,19793,21,11,45428,
+15,5a75e05c55429976ec32bc5f,Brown State Fishing Lake is in a country that has a population of how many inhabitants ?,"9,984",9984,judge,1,1.0,10,,True,0.8,20.203,37,30,71287,23,13,28731,
+16,5ab3e45655429976abd1bcd4,The Vermont Catamounts men's soccer team currently competes in a conference that was formerly known as what from 1988 to 1996?,the North Atlantic Conference,North Atlantic Conference,consensus,1,1.0,2,2,False,,2.839,6,4,6577,8,6,11757,
+17,5ab29c24554299449642c932,Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?,yes,,error,0,0.0,0,,False,,0.559,0,0,0,0,0,0,BadRequestError
+18,5ae0d4c9554299603e418468,Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the administration of a president that served during what years?,1969 until 1974,1969-1974,judge,0,0.0,10,,True,1.0,10.014,28,18,51231,21,11,31139,
+19,5a8133725542995ce29dcbdb,"Which writer was from England, Henry Roth or Robert Erskine Childers?",Robert Erskine Childers DSC,,error,0,0.0,0,,False,,0.611,0,0,0,0,0,0,BadRequestError

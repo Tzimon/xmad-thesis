@@ -1,0 +1,13 @@
+outcome,term,coef,std_err
+delta_em,intercept,0.0983,0.0257
+delta_em,different_vendor,-0.0092,0.0041
+delta_em,dense_x_moe,-0.0011,0.0047
+delta_em,moe_x_moe,0.0034,0.0066
+delta_em,log2_active_param_ratio,0.002,0.0018
+delta_em,mean_homog_em,-0.1537,0.0386
+jaccard_r1,intercept,0.1253,0.146
+jaccard_r1,different_vendor,-0.0392,0.023
+jaccard_r1,dense_x_moe,-0.018,0.0268
+jaccard_r1,moe_x_moe,-0.0266,0.0374
+jaccard_r1,log2_active_param_ratio,-0.0182,0.0103
+jaccard_r1,mean_homog_em,1.1114,0.2187

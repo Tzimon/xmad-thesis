@@ -1,0 +1,44 @@
+{
+  "model": "nemotron3-nano-4b",
+  "hf_id": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "ok": true,
+  "tool_call_parser": "qwen3_coder",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-24T09:27:13",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "qwen3_coder",
+      "server_started": true,
+      "load_s": 90.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 3}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: Both Scott Derrickson and Ed Wood are identified as American in the knowledge base, confirming they share the same nationality.  ",
+          "Final answer: yes"
+        ],
+        "extra_searches_before_answer": 0,
+        "extra_search_queries": [],
+        "last_content": "Reasoning summary: Both Scott Derrickson and Ed Wood are identified as American in the knowledge base, confirming they share the same nationality.  \nFinal answer: yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 34,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

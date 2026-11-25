@@ -1,0 +1,78 @@
+{
+  "run_id": "P3-017",
+  "label": "muse-glimmer-30b__muse-glimmer-30b",
+  "agent_a": "muse-glimmer-30b",
+  "agent_b": "muse-glimmer-30b",
+  "homogeneous": true,
+  "questions": 30,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.7667,
+  "f1": 0.8156,
+  "exact_match_consensus_only": 0.7667,
+  "source_counts": {
+    "consensus": 30
+  },
+  "consensus_rate": 1.0,
+  "judge_rate": 0.0,
+  "stop_reason_counts": {
+    "consensus": 30
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.7667,
+    "agent_b": 0.7667
+  },
+  "evidence_jaccard_round1": 0.9506,
+  "rounds_mean": 1.1,
+  "wall_time_s": {
+    "mean": 17.035,
+    "p50": 8.094,
+    "p90": 35.032,
+    "p99": 88.255,
+    "total": 511.0
+  },
+  "tokens": {
+    "agent_a": 252547,
+    "agent_b": 272188
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 4,
+    "agent_b": 5
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      3
+    ],
+    "gpus_agent_b": [
+      3
+    ],
+    "agent_a_wh": 75.45,
+    "agent_b_wh": 0.0,
+    "total_wh": 75.45,
+    "per_gpu": {
+      "3": {
+        "wh": 75.45,
+        "vram_peak_mib": 129297
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.00521,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-06T16:41:10"
+}

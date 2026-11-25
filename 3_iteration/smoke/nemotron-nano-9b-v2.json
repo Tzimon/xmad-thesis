@@ -1,0 +1,18 @@
+{
+  "model": "nemotron-nano-9b-v2",
+  "hf_id": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+  "ok": false,
+  "tool_call_parser": "nemotron_json",
+  "supports_parallel_tool_calls": false,
+  "tested": "2026-10-05T15:26:48",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "nemotron_json",
+      "server_started": false,
+      "log_tail": "  File \"uvloop/loop.pyx\", line 1515, in uvloop.loop.Loop.run_until_complete\n  File \"/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/uvloop/__init__.py\", line 48, in wrapper\n    return await main\n           ^^^^^^^^^^\n  File \"/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/vllm/entrypoints/launchers/api_server/entry.py\", line 171, in run_server\n    listen_address, sock = setup_server(args, reuse_port=False)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/vllm/tracing/otel.py\", line 175, in sync_wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/vllm/entrypoints/launchers/launcher.py\", line 263, in setup_server\n    validate_api_server_args(args)\n  File \"/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/vllm/entrypoints/launchers/launcher.py\", line 236, in validate_api_server_args\n    raise KeyError(\nKeyError: 'invalid tool call parser: nemotron_json (chose from { apertus,cohere_command3,cohere_command4,deepseek_v3,deepseek_v31,deepseek_v32,deepseek_v4,deepseek_v41,dots,ernie45,functiongemma,gemma4,gigachat3,glm45,glm47,granite,granite-20b-fc,granite4,hermes,hunyuan_a13b,hy_v3,hy_v4,inkling,internlm,jamba,k2_horizon,kimi_k2,kimi_k3,lfm2,ling3,llama3_json,llama4_json,llama4_pythonic,longcat,mimo,minicpm5,minimax_m2,minimax_m3,mistral,muse_glimmer,olmo3,openai,phi4_mini_json,poolside_v1,pythonic,qwen3_coder,qwen3_xml,seed_oss,step3,step3p5,xlam })'\n"
+    }
+  ]
+}

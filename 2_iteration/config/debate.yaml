@@ -1,0 +1,82 @@
+# xmad/2_iteration/config/debate.yaml
+#
+# Single source of truth for a debate run. Change the model urls/aliases to
+# switch between the homogeneous condition (2x same model) and the
+# heterogeneous condition (Qwen vs Llama) without touching any code.
+
+run:
+  label: "qwen_llama"        # e.g. "qwen_qwen" (homogeneous) or "qwen_llama" (heterogeneous)
+  n_questions: null          # null = whole dev split (7405); set an int to test on a slice
+  start: 0                   # first question index (for resuming a run)
+
+dataset:
+  name: "hotpotqa/hotpot_qa"
+  config: "distractor"
+  split: "validation"
+
+# --- the two debate agents -------------------------------------------------
+# For the homogeneous condition, point both at the same url/alias.
+# For the heterogeneous condition, point them at the two separately served
+# models (see phase 1 notes: distinct ports, distinct GPUs).
+agents:
+  agent_a:
+    alias: "qwen"
+    url: "http://127.0.0.1:7555/v1"
+    supports_parallel_tool_calls: true    # Qwen batches multiple searches; kept natural
+    # max_turns_per_round: omitted -> uses debate.max_turns_per_round (6)
+  agent_b:
+    alias: "llama"
+    url: "http://127.0.0.1:7556/v1"
+    supports_parallel_tool_calls: false   # Llama-3.1's own chat template rejects >1 per turn
+    max_turns_per_round: 12               # more headroom for sequential-only searching
+
+# --- decoding: ONE block, applied identically to both agents (C1.6) --------
+# No agent may receive different sampling settings; this is the only place
+# these values are defined, so both agents are guaranteed identical.
+# temperature=0.0 is load-bearing, not a default left over from testing: it is
+# the direct implementation of C1.6 and of the thesis's rejection of sampling
+# as a divergence mechanism (see subsec:positioning). Do not raise it without
+# updating that argument in the thesis text.
+decoding:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 1024             # generous headroom for multi-round reasoning;
+                                # kept finite as a safety cap against runaway
+                                # generation (cf. the 0.5B malformed-output case
+                                # from the Phase 1 sweep)
+
+# --- debate mechanics --------------------------------------------------------
+debate:
+  max_rounds: 10               # R_max, raised for safety headroom; most debates
+                                # are expected to stop earlier via consensus
+  consensus_check: "exact_normalized"   # reuses metrics.normalize_answer
+  force_first_search: true    # each agent's first turn in round 1 must search
+  max_turns_per_round: 6      # tool-call turn budget within a single round
+  stalemate_patience: 1        # consecutive unchanged rounds (per agent) before
+                                # ending early and deferring to the judge, instead
+                                # of running to max_rounds on a debate that has
+                                # stopped moving. 1 = a single repeat ends it;
+                                # raise for a more conservative (slower to stop) check.
+
+# --- shared MCP tool pool (identical for both agents, every round; C2) -----
+tools:
+  mcp_url: "http://127.0.0.1:7600/mcp"
+  agent_tools: ["search_knowledge_base"]
+
+# --- judge: tie-breaker ONLY if no consensus by max_rounds (C4) ------------
+judge:
+  enabled: true
+  url: "http://127.0.0.1:7555/v1"
+  alias: "qwen"
+  prompt_file: "prompts/judge_system_prompt.txt"
+  decoding:
+    temperature: 0.0
+    top_p: 1.0
+    # max_tokens intentionally omitted: no cap on the judge's output.
+
+prompts:
+  debate_system_prompt_file: "prompts/debate_system_prompt.txt"
+
+logging:
+  log_dir: "logs"
+  save_full_session: true     # store both agents' per-round views, not just the final answer

@@ -1,0 +1,47 @@
+{
+  "model": "qwen2.5-7b",
+  "hf_id": "Qwen/Qwen2.5-7B-Instruct",
+  "ok": true,
+  "tool_call_parser": "hermes",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-23T09:06:31",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "hermes",
+      "server_started": true,
+      "load_s": 205.1,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 3}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: Both Scott Derrickson and Ed Wood are explicitly identified as American in the search results.",
+          "Final answer: yes"
+        ],
+        "extra_searches_before_answer": 2,
+        "extra_search_queries": [
+          "{\"query\": \"Scott Derrickson nationality\", \"k\": 1}",
+          "{\"query\": \"Ed Wood nationality\", \"k\": 1}"
+        ],
+        "last_content": "Both Scott Derrickson and Ed Wood are described as American in the retrieved passages.\n\nReasoning summary: Both Scott Derrickson and Ed Wood are explicitly identified as American in the search results.\nFinal answer: yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 42,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

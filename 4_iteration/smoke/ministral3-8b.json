@@ -1,0 +1,45 @@
+{
+  "model": "ministral3-8b",
+  "hf_id": "mistralai/Ministral-3-8B-Instruct-2512",
+  "ok": true,
+  "tool_call_parser": "mistral",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-24T09:23:17",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "mistral",
+      "server_started": true,
+      "load_s": 90.0,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\"}",
+          "{\"query\": \"Ed Wood nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "",
+          "Final answer: no"
+        ],
+        "extra_searches_before_answer": 0,
+        "extra_search_queries": [],
+        "last_content": "Reasoning summary: Both Scott Derrickson and Ed Wood were born in the United States, making them American by nationality.\n\nFinal answer: no",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 29,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

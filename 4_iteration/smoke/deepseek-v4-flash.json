@@ -1,0 +1,27 @@
+{
+  "model": "deepseek-v4-flash",
+  "hf_id": "deepseek-ai/DeepSeek-V4-Flash",
+  "ok": true,
+  "tool_call_parser": "deepseek_v4",
+  "supports_parallel_tool_calls": false,
+  "tested": "2026-10-23T09:18:48",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "deepseek_v4",
+      "server_started": true,
+      "load_s": 730.1,
+      "J1_judge_format": {
+        "pass": true,
+        "final_answer": "yes",
+        "confidence": 0.7,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

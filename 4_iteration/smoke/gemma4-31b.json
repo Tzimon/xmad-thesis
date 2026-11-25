@@ -1,0 +1,45 @@
+{
+  "model": "gemma4-31b",
+  "hf_id": "google/gemma-4-31B-it",
+  "ok": true,
+  "tool_call_parser": "gemma4",
+  "supports_parallel_tool_calls": true,
+  "tested": "2026-10-24T09:16:52",
+  "gpus": [
+    0
+  ],
+  "attempts": [
+    {
+      "tool_call_parser": "gemma4",
+      "server_started": true,
+      "load_s": 385.1,
+      "T1_tool_call": {
+        "pass": true,
+        "calls": [
+          "{\"query\": \"Scott Derrickson nationality\"}",
+          "{\"query\": \"Ed Wood nationality\"}"
+        ]
+      },
+      "T2_parallel": {
+        "calls_in_one_reply": 2,
+        "replay_ok": true,
+        "supports_parallel_tool_calls": true
+      },
+      "T3_answer": {
+        "forced_final": false,
+        "pass": true,
+        "final_lines": [
+          "Reasoning summary: Scott Derrickson is an American director, screenwriter, and producer. Ed Wood was an American filmmaker, actor, writer, producer, and director.",
+          "Final answer: Yes"
+        ],
+        "extra_searches_before_answer": 0,
+        "extra_search_queries": [],
+        "last_content": "Both Scott Derrickson and Ed Wood are described as American.\n\nReasoning summary: Scott Derrickson is an American director, screenwriter, and producer. Ed Wood was an American filmmaker, actor, writer, producer, and director.\nFinal answer: Yes",
+        "think_tag_in_content": false,
+        "reasoning_chars": 0,
+        "completion_tokens": 56,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

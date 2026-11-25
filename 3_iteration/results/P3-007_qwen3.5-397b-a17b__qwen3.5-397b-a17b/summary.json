@@ -1,0 +1,99 @@
+{
+  "run_id": "P3-007",
+  "label": "qwen3.5-397b-a17b__qwen3.5-397b-a17b",
+  "agent_a": "qwen3.5-397b-a17b",
+  "agent_b": "qwen3.5-397b-a17b",
+  "homogeneous": true,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.652,
+  "f1": 0.8058,
+  "exact_match_consensus_only": 0.6559,
+  "source_counts": {
+    "consensus": 991,
+    "judge": 9
+  },
+  "consensus_rate": 0.991,
+  "judge_rate": 0.009,
+  "stop_reason_counts": {
+    "consensus": 991,
+    "stalemate": 9
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.644,
+    "agent_b": 0.646
+  },
+  "evidence_jaccard_round1": 0.9764,
+  "rounds_mean": 1.059,
+  "wall_time_s": {
+    "mean": 3.173,
+    "p50": 1.867,
+    "p90": 5.31,
+    "p99": 27.08,
+    "total": 3172.6
+  },
+  "tokens": {
+    "agent_a": 3843093,
+    "agent_b": 3867251
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 44,
+    "agent_b": 39
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "gpus_agent_b": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "agent_a_wh": 1295.2,
+    "agent_b_wh": 0.0,
+    "total_wh": 1295.2,
+    "per_gpu": {
+      "0": {
+        "wh": 57.48,
+        "vram_peak_mib": 130193
+      },
+      "3": {
+        "wh": 56.87,
+        "vram_peak_mib": 128319
+      },
+      "4": {
+        "wh": 54.84,
+        "vram_peak_mib": 128319
+      },
+      "5": {
+        "wh": 52.25,
+        "vram_peak_mib": 128319
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.08937,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run; repaired run: re-run part measured + kept share of the first attempt (estimate)"
+  },
+  "updated": "2026-10-08T08:22:37",
+  "judge_model": "deepseek-v4-flash"
+}

@@ -1,0 +1,100 @@
+{
+  "run_id": "P3-043",
+  "label": "qwen3.5-27b__qwen3.5-397b-a17b",
+  "agent_a": "qwen3.5-27b",
+  "agent_b": "qwen3.5-397b-a17b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.642,
+  "f1": 0.7962,
+  "exact_match_consensus_only": 0.6632,
+  "source_counts": {
+    "consensus": 956,
+    "judge": 44
+  },
+  "consensus_rate": 0.956,
+  "judge_rate": 0.044,
+  "stop_reason_counts": {
+    "consensus": 956,
+    "stalemate": 44
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.633,
+    "agent_b": 0.647
+  },
+  "evidence_jaccard_round1": 0.8319,
+  "rounds_mean": 1.167,
+  "wall_time_s": {
+    "mean": 7.681,
+    "p50": 3.794,
+    "p90": 12.277,
+    "p99": 89.784,
+    "total": 7680.8
+  },
+  "tokens": {
+    "agent_a": 5742861,
+    "agent_b": 4386955
+  },
+  "truncated_replies": {
+    "agent_a": 6,
+    "agent_b": 2
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 85,
+    "agent_b": 50
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      0
+    ],
+    "gpus_agent_b": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "agent_a_wh": 1228.31,
+    "agent_b_wh": 1628.65,
+    "total_wh": 2856.96,
+    "per_gpu": {
+      "0": {
+        "wh": 1228.31,
+        "vram_peak_mib": 129115
+      },
+      "1": {
+        "wh": 404.07,
+        "vram_peak_mib": 127967
+      },
+      "2": {
+        "wh": 389.22,
+        "vram_peak_mib": 127969
+      },
+      "3": {
+        "wh": 420.82,
+        "vram_peak_mib": 127969
+      },
+      "4": {
+        "wh": 414.54,
+        "vram_peak_mib": 127969
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.19713,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-08T08:45:01",
+  "judge_model": "deepseek-v4-flash"
+}

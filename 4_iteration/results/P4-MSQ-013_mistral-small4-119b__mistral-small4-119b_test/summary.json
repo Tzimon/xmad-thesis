@@ -1,0 +1,99 @@
+{
+  "run_id": "P4-MSQ-013",
+  "label": "mistral-small4-119b__mistral-small4-119b",
+  "benchmark": "musique",
+  "agent_a": "mistral-small4-119b",
+  "agent_b": "mistral-small4-119b",
+  "homogeneous": true,
+  "questions": 30,
+  "complete": true,
+  "judge_pending": 2,
+  "exact_match": 0.3,
+  "f1": 0.4298,
+  "exact_match_consensus_only": 0.3214,
+  "source_counts": {
+    "consensus": 28,
+    "pending_judge": 2
+  },
+  "consensus_rate": 0.9333,
+  "judge_rate": 0.0667,
+  "stop_reason_counts": {
+    "consensus": 28,
+    "stalemate": 2
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.3333,
+    "agent_b": 0.2667
+  },
+  "evidence_jaccard_round1": 0.8363,
+  "evidence_recall": {
+    "agent_a_round1": 0.9056,
+    "agent_b_round1": 0.8556,
+    "union_round1": 0.9222,
+    "all_rounds": 0.9333
+  },
+  "rounds_mean": 1.633,
+  "wall_time_s": {
+    "mean": 9.01,
+    "p50": 6.81,
+    "p90": 17.366,
+    "p99": 33.253,
+    "total": 270.3
+  },
+  "tokens": {
+    "agent_a": 534456,
+    "agent_b": 531188
+  },
+  "tokens_split": {
+    "a_prompt": 520530,
+    "a_completion": 13926,
+    "b_prompt": 517574,
+    "b_completion": 13614
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 17,
+    "agent_b": 18
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 4,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      5,
+      6
+    ],
+    "gpus_agent_b": [
+      5,
+      6
+    ],
+    "agent_a_wh": 31.25,
+    "agent_b_wh": 0.0,
+    "total_wh": 31.25,
+    "per_gpu": {
+      "5": {
+        "wh": 16.79,
+        "vram_peak_mib": 130430
+      },
+      "6": {
+        "wh": 14.46,
+        "vram_peak_mib": 127851
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.00216,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-24T15:30:24"
+}

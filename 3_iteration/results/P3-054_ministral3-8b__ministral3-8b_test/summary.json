@@ -1,0 +1,78 @@
+{
+  "run_id": "P3-054",
+  "label": "ministral3-8b__ministral3-8b",
+  "agent_a": "ministral3-8b",
+  "agent_b": "ministral3-8b",
+  "homogeneous": true,
+  "questions": 30,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.5,
+  "f1": 0.5933,
+  "exact_match_consensus_only": 0.5,
+  "source_counts": {
+    "consensus": 30
+  },
+  "consensus_rate": 1.0,
+  "judge_rate": 0.0,
+  "stop_reason_counts": {
+    "consensus": 30
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.4667,
+    "agent_b": 0.5333
+  },
+  "evidence_jaccard_round1": 1.0,
+  "rounds_mean": 1.1,
+  "wall_time_s": {
+    "mean": 1.099,
+    "p50": 0.681,
+    "p90": 2.205,
+    "p99": 3.078,
+    "total": 33.0
+  },
+  "tokens": {
+    "agent_a": 118786,
+    "agent_b": 114516
+  },
+  "truncated_replies": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 3,
+    "agent_b": 3
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      6
+    ],
+    "gpus_agent_b": [
+      6
+    ],
+    "agent_a_wh": 5.74,
+    "agent_b_wh": 0.0,
+    "total_wh": 5.74,
+    "per_gpu": {
+      "6": {
+        "wh": 5.74,
+        "vram_peak_mib": 127767
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.0004,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-10-06T17:13:36"
+}

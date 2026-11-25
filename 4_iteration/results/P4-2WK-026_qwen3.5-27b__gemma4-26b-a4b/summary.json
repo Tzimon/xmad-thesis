@@ -1,0 +1,98 @@
+{
+  "run_id": "P4-2WK-026",
+  "label": "qwen3.5-27b__gemma4-26b-a4b",
+  "benchmark": "2wiki",
+  "agent_a": "qwen3.5-27b",
+  "agent_b": "gemma4-26b-a4b",
+  "homogeneous": false,
+  "questions": 1000,
+  "complete": true,
+  "judge_pending": 0,
+  "exact_match": 0.698,
+  "f1": 0.7717,
+  "exact_match_consensus_only": 0.7327,
+  "source_counts": {
+    "consensus": 939,
+    "judge": 61
+  },
+  "consensus_rate": 0.939,
+  "judge_rate": 0.061,
+  "stop_reason_counts": {
+    "consensus": 939,
+    "stalemate": 61
+  },
+  "round1_single_agent_em": {
+    "agent_a": 0.725,
+    "agent_b": 0.664
+  },
+  "evidence_jaccard_round1": 0.8215,
+  "evidence_recall": {
+    "agent_a_round1": 0.9965,
+    "agent_b_round1": 0.9708,
+    "union_round1": 0.997,
+    "all_rounds": 0.997
+  },
+  "rounds_mean": 1.237,
+  "wall_time_s": {
+    "mean": 10.004,
+    "p50": 4.766,
+    "p90": 17.568,
+    "p99": 93.693,
+    "total": 10004.3
+  },
+  "tokens": {
+    "agent_a": 8473868,
+    "agent_b": 4533141
+  },
+  "tokens_split": {
+    "a_prompt": 7967017,
+    "a_completion": 506851,
+    "b_prompt": 3892815,
+    "b_completion": 640326
+  },
+  "truncated_replies": {
+    "agent_a": 2,
+    "agent_b": 44
+  },
+  "api_retries": 0,
+  "forced_final_answers": {
+    "agent_a": 193,
+    "agent_b": 33
+  },
+  "no_answer_round1": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "no_answer_final": 0,
+  "invalid_tool_calls": {
+    "agent_a": 0,
+    "agent_b": 0
+  },
+  "errors": {},
+  "energy": {
+    "gpus_agent_a": [
+      5
+    ],
+    "gpus_agent_b": [
+      6
+    ],
+    "agent_a_wh": 1119.12,
+    "agent_b_wh": 475.62,
+    "total_wh": 1594.74,
+    "per_gpu": {
+      "5": {
+        "wh": 1119.12,
+        "vram_peak_mib": 129147
+      },
+      "6": {
+        "wh": 475.62,
+        "vram_peak_mib": 126657
+      }
+    },
+    "kwh_price_eur": 0.069,
+    "cost_eur": 0.11004,
+    "note": "GPU power only (nvidia-smi), only the GPUs assigned to this run"
+  },
+  "updated": "2026-11-01T05:37:32",
+  "judge_model": "deepseek-v4-flash"
+}

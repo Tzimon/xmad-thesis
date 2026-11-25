@@ -1,0 +1,29 @@
+{
+  "run_id": "P4-MSQ-031",
+  "state": "done",
+  "started": "2026-10-26T09:50:24",
+  "node": "gpu-node",
+  "slurm_job_id": "",
+  "gpus_agent_a": [
+    4
+  ],
+  "gpus_agent_b": [
+    5
+  ],
+  "ports": {
+    "a": 8020,
+    "b": 8021,
+    "mcp": 8025
+  },
+  "running_at_the_same_time": [
+    "P4-MSQ-028",
+    "P4-MSQ-029",
+    "P4-MSQ-030"
+  ],
+  "attempts": 1,
+  "message": "",
+  "models_ready_after_s": 335.2,
+  "finished": "2026-10-26T17:37:04",
+  "duration_min": 466.7,
+  "judged": "2026-11-01T05:12:13"
+}

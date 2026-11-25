@@ -1,0 +1,962 @@
+################ results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b
+total 348
+drwxr-xr-x 2 spitzer spitzer   4096 Oct 26 09:42 .
+drwxr-xr-x 4 spitzer spitzer   4096 Oct 26 10:21 ..
+-rw-r--r-- 1 spitzer spitzer  93213 Oct 26 10:21 mcp.log
+-rw-r--r-- 1 spitzer spitzer 115169 Oct 26 10:21 vllm_gemma4-26b-a4b.log
+-rw-r--r-- 1 spitzer spitzer 120433 Oct 26 10:21 vllm_muse-glimmer-30b.log
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/server_logs/mcp.log (error lines)
+1632:INFO:     Waiting for application shutdown.
+1633:INFO:     Application shutdown complete.
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/server_logs/mcp.log (last 40 lines)
+INFO:     127.0.0.1:47002 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47002 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47002 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54254 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54254 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54254 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33992 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34448 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34448 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34448 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34448 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34448 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39472 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [760223]
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/server_logs/vllm_gemma4-26b-a4b.log (error lines)
+794:(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+795:(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:128] [shutdown] API server: shutdown triggered
+796:(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+797:(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+798:(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+799:(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+800:(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+801:(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+802:(APIServer pid=757625) INFO 10-26 10:21:21 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+803:(APIServer pid=757625) WARNING 10-26 10:21:21 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+804:(APIServer pid=757625) WARNING 10-26 10:21:21 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 758725
+805:(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+806:(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+807:(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:769] [shutdown] MPClient: complete
+808:(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:153] [shutdown] API server: engine client stopped
+809:(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+810:(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+812:INFO:     Waiting for application shutdown.
+813:INFO:     Application shutdown complete.
+814:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/server_logs/vllm_gemma4-26b-a4b.log (last 40 lines)
+INFO:     127.0.0.1:39424 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39424 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39424 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39424 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757625) INFO 10-26 10:20:18 [loggers.py:320] Engine 000: Avg prompt throughput: 715.1 tokens/s, Avg generation throughput: 48.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.4%, Prefix cache hit rate: 65.8%
+INFO:     127.0.0.1:39424 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757625) INFO 10-26 10:20:28 [loggers.py:320] Engine 000: Avg prompt throughput: 110.7 tokens/s, Avg generation throughput: 20.7 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 65.7%
+(APIServer pid=757625) INFO 10-26 10:20:38 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 65.7%
+INFO:     127.0.0.1:60876 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60876 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60876 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60876 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60876 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757625) INFO 10-26 10:20:48 [loggers.py:320] Engine 000: Avg prompt throughput: 253.5 tokens/s, Avg generation throughput: 26.7 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 65.8%
+(APIServer pid=757625) INFO 10-26 10:20:58 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 65.8%
+(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=758725) INFO 10-26 10:21:21 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=757625) INFO 10-26 10:21:21 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=757625) WARNING 10-26 10:21:21 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=757625) WARNING 10-26 10:21:21 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 758725
+(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=757625) INFO 10-26 10:21:21 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=757625) INFO 10-26 10:21:21 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/server_logs/vllm_muse-glimmer-30b.log (error lines)
+865:(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+866:(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:128] [shutdown] API server: shutdown triggered
+867:(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+868:(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+869:(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+870:(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+871:(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+872:(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+873:(APIServer pid=757624) INFO 10-26 10:21:22 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+874:(APIServer pid=757624) WARNING 10-26 10:21:22 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+875:(APIServer pid=757624) WARNING 10-26 10:21:22 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 758044
+876:(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+877:(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+878:(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:769] [shutdown] MPClient: complete
+879:(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:153] [shutdown] API server: engine client stopped
+880:(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+881:(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+883:INFO:     Waiting for application shutdown.
+884:INFO:     Application shutdown complete.
+885:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/server_logs/vllm_muse-glimmer-30b.log (last 40 lines)
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757624) INFO 10-26 10:20:34 [loggers.py:320] Engine 000: Avg prompt throughput: 180.5 tokens/s, Avg generation throughput: 59.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 62.0%
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757624) INFO 10-26 10:20:44 [loggers.py:320] Engine 000: Avg prompt throughput: 332.0 tokens/s, Avg generation throughput: 58.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 62.2%
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757624) INFO 10-26 10:20:54 [loggers.py:320] Engine 000: Avg prompt throughput: 3.5 tokens/s, Avg generation throughput: 60.9 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 62.2%
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757624) INFO 10-26 10:21:04 [loggers.py:320] Engine 000: Avg prompt throughput: 436.3 tokens/s, Avg generation throughput: 58.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 62.2%
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=757624) INFO 10-26 10:21:14 [loggers.py:320] Engine 000: Avg prompt throughput: 54.7 tokens/s, Avg generation throughput: 60.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 62.4%
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=758044) INFO 10-26 10:21:22 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=757624) INFO 10-26 10:21:22 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=757624) WARNING 10-26 10:21:22 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=757624) WARNING 10-26 10:21:22 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 758044
+(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=757624) INFO 10-26 10:21:22 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=757624) INFO 10-26 10:21:22 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/debate.log (error lines)
+8:Traceback (most recent call last):
+34:    await self.gen.athrow(typ, value, traceback)
+37:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 39, in __exit__
+39:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+42:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+72:    with map_httpcore_exceptions():
+74:    self.gen.throw(typ, value, traceback)
+75:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+77:httpx2.ReadError
+======== results/P4-MSQ-029_muse-glimmer-30b__gemma4-26b-a4b/debate.log (last 40 lines)
+    raise unhandled from exc.__cause__
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+    result = handler(matched)
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+    raise leaf
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/anyio/_core/_tasks.py", line 327, in _run_coro
+    retval = await self._coro
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 355, in _run_request_post
+    await post_fn()
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 662, in handle_request_async
+    await self._handle_post_request(ctx)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 370, in _handle_post_request
+    async with stream_within_origin(
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/shared/_httpx_utils.py", line 131, in stream_within_origin
+    response = await client.send(request, stream=True, follow_redirects=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1818, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1846, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1881, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1915, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 387, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx2.ReadError
+################ results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b
+total 776
+drwxr-xr-x 2 spitzer spitzer   4096 Oct 27 10:59 .
+drwxr-xr-x 4 spitzer spitzer   4096 Oct 27 11:50 ..
+-rw-r--r-- 1 spitzer spitzer 219027 Oct 27 11:50 mcp.log
+-rw-r--r-- 1 spitzer spitzer 230360 Oct 27 11:50 vllm_qwen3.5-35b-a3b.log
+-rw-r--r-- 1 spitzer spitzer 318494 Oct 27 11:50 vllm_qwen3.5-397b-a17b.log
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/server_logs/mcp.log (error lines)
+3890:INFO:     Waiting for application shutdown.
+3891:INFO:     Application shutdown complete.
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/server_logs/mcp.log (last 40 lines)
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47776 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41828 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41828 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41828 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41828 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41816 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41828 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41828 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [980668]
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/server_logs/vllm_qwen3.5-35b-a3b.log (error lines)
+2128:(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:128] [shutdown] API server: shutdown triggered
+2129:(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+2130:(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+2131:(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+2132:(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+2133:(APIServer pid=969806) INFO 10-27 11:50:20 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+2134:(APIServer pid=969806) WARNING 10-27 11:50:20 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+2135:(APIServer pid=969806) WARNING 10-27 11:50:20 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 972871
+2136:(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+2137:(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+2138:(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+2139:(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+2140:(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+2141:(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+2142:(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:769] [shutdown] MPClient: complete
+2143:(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:153] [shutdown] API server: engine client stopped
+2144:(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+2145:(APIServer pid=969806) INFO 10-27 11:50:21 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+2147:INFO:     Waiting for application shutdown.
+2148:INFO:     Application shutdown complete.
+2149:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/server_logs/vllm_qwen3.5-35b-a3b.log (last 40 lines)
+INFO:     127.0.0.1:54986 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54986 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54986 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54986 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54986 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=969806) INFO 10-27 11:49:34 [loggers.py:320] Engine 000: Avg prompt throughput: 1290.6 tokens/s, Avg generation throughput: 80.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.3%, Prefix cache hit rate: 31.0%
+INFO:     127.0.0.1:54986 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=969806) INFO 10-27 11:49:44 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 92.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 31.0%
+(APIServer pid=969806) INFO 10-27 11:49:54 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 31.0%
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34174 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=969806) INFO 10-27 11:50:14 [loggers.py:320] Engine 000: Avg prompt throughput: 1161.6 tokens/s, Avg generation throughput: 55.3 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 31.0%
+(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=969806) INFO 10-27 11:50:20 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=969806) WARNING 10-27 11:50:20 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=969806) WARNING 10-27 11:50:20 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 972871
+(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=972871) INFO 10-27 11:50:20 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=969806) INFO 10-27 11:50:20 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=969806) INFO 10-27 11:50:20 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=969806) INFO 10-27 11:50:21 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/server_logs/vllm_qwen3.5-397b-a17b.log (error lines)
+535:[rank2]:W1027 10:57:57.980000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/GILPPV6YNB7RIDEHDIUVXX77C2LW2TJZRTZGRDJLPUMB5CQF6GOA/triton_poi_fused_zeros_3.cubin')
+537:[rank2]:W1027 10:57:58.020000 972297 torch/_inductor/triton_bundler.py:242] Traceback (most recent call last):
+541:[rank2]:W1027 10:57:58.020000 972297 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(
+542:[rank2]:W1027 10:57:58.020000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/NQPG6XNIBSHVM4N5G4L46BTGLAKBNAGOSAX65GBMBRD3QHIZQQRQ/triton_poi_fused_mul_per_token_group_fp8_quant_sigmoid_view_0.cubin')
+544:[rank2]:W1027 10:57:58.039000 972297 torch/_inductor/triton_bundler.py:242] Traceback (most recent call last):
+548:[rank2]:W1027 10:57:58.039000 972297 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(
+549:[rank2]:W1027 10:57:58.039000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/G6K5BSKDEHNOUB4K6MMNH5ILVVQYBEXPUXTUJDG2PIECO2N57CQQ/triton_red_fused__to_copy_add_fused_add_rms_norm_moe_forward_shared_1.cubin')
+551:[rank2]:W1027 10:57:58.044000 972297 torch/_inductor/triton_bundler.py:242] Traceback (most recent call last):
+555:[rank2]:W1027 10:57:58.044000 972297 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(
+556:[rank2]:W1027 10:57:58.044000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/TH66LHHUCP6HCZSTFF2G52KLC7DIULCY3KJPBOZSFCCC7KPUDDHA/triton_poi_fused_add_2.cubin')
+558:[rank2]:W1027 10:57:58.056000 972297 torch/_inductor/triton_bundler.py:242] Traceback (most recent call last):
+562:[rank2]:W1027 10:57:58.056000 972297 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(
+563:[rank2]:W1027 10:57:58.056000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/AHU2BUMSNJKONFDWDU43WU5LSQYATHMRWF5AAVAZRPWWK4GAWKUA/triton_red_fused__to_copy_add_fused_add_rms_norm_3.cubin')
+565:[rank2]:W1027 10:57:58.057000 972297 torch/_inductor/triton_bundler.py:242] Traceback (most recent call last):
+569:[rank2]:W1027 10:57:58.057000 972297 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(
+570:[rank2]:W1027 10:57:58.057000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/KFUKSG3OSTZGX3LIR4IKVFPKTRUBJW2EVZPHYJCLYY7WVRKKBAUQ/triton_poi_fused_zeros_4.cubin')
+572:[rank2]:W1027 10:57:58.190000 972297 torch/_inductor/triton_bundler.py:242] Traceback (most recent call last):
+576:[rank2]:W1027 10:57:58.190000 972297 torch/_inductor/triton_bundler.py:242]     raise RuntimeError(
+577:[rank2]:W1027 10:57:58.190000 972297 torch/_inductor/triton_bundler.py:242] RuntimeError: ('Cubin file saved by TritonBundler not found at %s', '/tmp/torchinductor_spitzer/triton/2/6TNY4VQLTX4AFJNMXFZNMTMNA35X3FWAQUF3NFCBMOFVRYUJJXOA/triton_red_fused__to_copy_add_fused_add_rms_norm_3.cubin')
+2655:(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+2656:(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:128] [shutdown] API server: shutdown triggered
+2657:(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+2658:(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+2659:(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+2660:(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+2661:(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+2662:(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+2663:(APIServer pid=969810) INFO 10-27 11:50:18 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+2664:(APIServer pid=969810) WARNING 10-27 11:50:18 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+2665:(APIServer pid=969810) WARNING 10-27 11:50:18 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 971803
+2666:(Worker_TP0 pid=972295) INFO 10-27 11:50:18 [multiproc_executor.py:838] Parent process exited, terminating worker queues
+2667:(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+2668:(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+2669:(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:769] [shutdown] MPClient: complete
+2670:(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:153] [shutdown] API server: engine client stopped
+2671:(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+2672:(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+2674:INFO:     Waiting for application shutdown.
+2675:INFO:     Application shutdown complete.
+2676:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/server_logs/vllm_qwen3.5-397b-a17b.log (last 40 lines)
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=969810) INFO 10-27 11:49:32 [loggers.py:320] Engine 000: Avg prompt throughput: 957.3 tokens/s, Avg generation throughput: 92.7 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.3%, Prefix cache hit rate: 28.2%
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=969810) INFO 10-27 11:49:42 [loggers.py:320] Engine 000: Avg prompt throughput: 625.8 tokens/s, Avg generation throughput: 96.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.4%, Prefix cache hit rate: 28.3%
+(APIServer pid=969810) INFO 10-27 11:49:52 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 118.9 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.5%, Prefix cache hit rate: 28.3%
+(APIServer pid=969810) INFO 10-27 11:50:02 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 117.9 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.6%, Prefix cache hit rate: 28.3%
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=969810) INFO 10-27 11:50:12 [loggers.py:320] Engine 000: Avg prompt throughput: 298.6 tokens/s, Avg generation throughput: 111.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.4%, Prefix cache hit rate: 28.2%
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=971803) INFO 10-27 11:50:18 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=969810) INFO 10-27 11:50:18 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=969810) WARNING 10-27 11:50:18 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=969810) WARNING 10-27 11:50:18 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 971803
+(Worker_TP0 pid=972295) INFO 10-27 11:50:18 [multiproc_executor.py:838] Parent process exited, terminating worker queues
+(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=969810) INFO 10-27 11:50:18 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=969810) INFO 10-27 11:50:18 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/debate.log (error lines)
+17:Traceback (most recent call last):
+43:    await self.gen.athrow(typ, value, traceback)
+46:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 39, in __exit__
+48:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+51:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+81:    with map_httpcore_exceptions():
+83:    self.gen.throw(typ, value, traceback)
+84:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+86:httpx2.ReadError
+======== results/P4-MSQ-037_qwen3.5-35b-a3b__qwen3.5-397b-a17b/debate.log (last 40 lines)
+    raise unhandled from exc.__cause__
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+    result = handler(matched)
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+    raise leaf
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/anyio/_core/_tasks.py", line 327, in _run_coro
+    retval = await self._coro
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 355, in _run_request_post
+    await post_fn()
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 662, in handle_request_async
+    await self._handle_post_request(ctx)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 370, in _handle_post_request
+    async with stream_within_origin(
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/shared/_httpx_utils.py", line 131, in stream_within_origin
+    response = await client.send(request, stream=True, follow_redirects=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1818, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1846, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1881, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1915, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 387, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx2.ReadError
+################ results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b
+total 668
+drwxr-xr-x 2 spitzer spitzer   4096 Oct 27 22:21 .
+drwxr-xr-x 4 spitzer spitzer   4096 Oct 27 23:19 ..
+-rw-r--r-- 1 spitzer spitzer 280600 Oct 27 23:19 mcp.log
+-rw-r--r-- 1 spitzer spitzer 181691 Oct 27 23:19 vllm_muse-glimmer-30b.log
+-rw-r--r-- 1 spitzer spitzer 195544 Oct 27 23:19 vllm_qwen3.5-27b.log
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/server_logs/mcp.log (error lines)
+4987:INFO:     Waiting for application shutdown.
+4988:INFO:     Application shutdown complete.
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/server_logs/mcp.log (last 40 lines)
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45858 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45862 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1083707]
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/server_logs/vllm_muse-glimmer-30b.log (error lines)
+1449:(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+1450:(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:128] [shutdown] API server: shutdown triggered
+1451:(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+1452:(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+1453:(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+1454:(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+1455:(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+1456:(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+1457:(APIServer pid=1081348) INFO 10-27 23:19:30 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+1458:(APIServer pid=1081348) WARNING 10-27 23:19:30 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+1459:(APIServer pid=1081348) WARNING 10-27 23:19:30 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1081961
+1460:(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+1461:(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+1462:(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:769] [shutdown] MPClient: complete
+1463:(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:153] [shutdown] API server: engine client stopped
+1464:(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+1465:(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+1467:INFO:     Waiting for application shutdown.
+1468:INFO:     Application shutdown complete.
+1469:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/server_logs/vllm_muse-glimmer-30b.log (last 40 lines)
+(APIServer pid=1081348) INFO 10-27 23:18:19 [loggers.py:320] Engine 000: Avg prompt throughput: 929.4 tokens/s, Avg generation throughput: 56.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 59.7%
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081348) INFO 10-27 23:18:29 [loggers.py:320] Engine 000: Avg prompt throughput: 436.3 tokens/s, Avg generation throughput: 58.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 59.7%
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081348) INFO 10-27 23:18:39 [loggers.py:320] Engine 000: Avg prompt throughput: 281.6 tokens/s, Avg generation throughput: 59.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 59.7%
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081348) INFO 10-27 23:18:49 [loggers.py:320] Engine 000: Avg prompt throughput: 390.7 tokens/s, Avg generation throughput: 58.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.3%, Prefix cache hit rate: 59.8%
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081348) INFO 10-27 23:18:59 [loggers.py:320] Engine 000: Avg prompt throughput: 692.7 tokens/s, Avg generation throughput: 40.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 59.7%
+(APIServer pid=1081348) INFO 10-27 23:19:09 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 59.7%
+(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=1081961) INFO 10-27 23:19:30 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=1081348) INFO 10-27 23:19:30 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=1081348) WARNING 10-27 23:19:30 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=1081348) WARNING 10-27 23:19:30 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1081961
+(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=1081348) INFO 10-27 23:19:30 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=1081348) INFO 10-27 23:19:30 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/server_logs/vllm_qwen3.5-27b.log (error lines)
+1616:(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+1617:(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:128] [shutdown] API server: shutdown triggered
+1618:(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+1619:(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+1620:(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+1621:(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+1622:(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+1623:(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+1624:(APIServer pid=1081347) INFO 10-27 23:19:31 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+1625:(APIServer pid=1081347) WARNING 10-27 23:19:31 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+1626:(APIServer pid=1081347) WARNING 10-27 23:19:31 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1082807
+1627:(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+1628:(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+1629:(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:769] [shutdown] MPClient: complete
+1630:(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:153] [shutdown] API server: engine client stopped
+1631:(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+1632:(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+1634:INFO:     Waiting for application shutdown.
+1635:INFO:     Application shutdown complete.
+1636:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/server_logs/vllm_qwen3.5-27b.log (last 40 lines)
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081347) INFO 10-27 23:18:28 [loggers.py:320] Engine 000: Avg prompt throughput: 1155.5 tokens/s, Avg generation throughput: 47.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 34.9%
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081347) INFO 10-27 23:18:38 [loggers.py:320] Engine 000: Avg prompt throughput: 1102.0 tokens/s, Avg generation throughput: 50.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.7%, Prefix cache hit rate: 35.1%
+INFO:     127.0.0.1:50772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1081347) INFO 10-27 23:18:48 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 54.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 35.1%
+(APIServer pid=1081347) INFO 10-27 23:18:58 [loggers.py:320] Engine 000: Avg prompt throughput: 840.4 tokens/s, Avg generation throughput: 2.2 tokens/s, Running: 25 reqs, Waiting: 7 reqs, Deferred: 7 reqs, GPU KV cache usage: 7.0%, Prefix cache hit rate: 34.8%
+(APIServer pid=1081347) INFO 10-27 23:19:08 [loggers.py:320] Engine 000: Avg prompt throughput: 7595.8 tokens/s, Avg generation throughput: 79.0 tokens/s, Running: 145 reqs, Waiting: 126 reqs, Deferred: 126 reqs, GPU KV cache usage: 40.4%, Prefix cache hit rate: 33.5%
+(APIServer pid=1081347) INFO 10-27 23:19:18 [loggers.py:320] Engine 000: Avg prompt throughput: 6840.0 tokens/s, Avg generation throughput: 173.7 tokens/s, Running: 253 reqs, Waiting: 233 reqs, Deferred: 233 reqs, GPU KV cache usage: 70.4%, Prefix cache hit rate: 32.5%
+(APIServer pid=1081347) INFO 10-27 23:19:28 [loggers.py:320] Engine 000: Avg prompt throughput: 6082.2 tokens/s, Avg generation throughput: 244.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 30.9%
+(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=1082807) INFO 10-27 23:19:31 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=1081347) INFO 10-27 23:19:31 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=1081347) WARNING 10-27 23:19:31 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=1081347) WARNING 10-27 23:19:31 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1082807
+(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=1081347) INFO 10-27 23:19:31 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=1081347) INFO 10-27 23:19:31 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/debate.log (error lines)
+15:[P4-2WK-023] 275/1000  EM so far 0.647  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+16:[P4-2WK-023] 300/1000  EM so far 0.593  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+17:[P4-2WK-023] 325/1000  EM so far 0.548  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+18:[P4-2WK-023] 350/1000  EM so far 0.509  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+19:[P4-2WK-023] 375/1000  EM so far 0.475  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+20:[P4-2WK-023] 400/1000  EM so far 0.445  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+21:[P4-2WK-023] 425/1000  EM so far 0.419  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+22:[P4-2WK-023] 450/1000  EM so far 0.396  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+23:[P4-2WK-023] 475/1000  EM so far 0.375  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+24:[P4-2WK-023] 500/1000  EM so far 0.356  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+25:[P4-2WK-023] 525/1000  EM so far 0.339  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+26:[P4-2WK-023] 550/1000  EM so far 0.324  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+27:[P4-2WK-023] 575/1000  EM so far 0.310  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+28:[P4-2WK-023] 600/1000  EM so far 0.297  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+29:[P4-2WK-023] 625/1000  EM so far 0.285  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+30:[P4-2WK-023] 650/1000  EM so far 0.274  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+31:[P4-2WK-023] 675/1000  EM so far 0.264  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+32:[P4-2WK-023] 700/1000  EM so far 0.254  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+33:[P4-2WK-023] 725/1000  EM so far 0.246  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+34:[P4-2WK-023] 750/1000  EM so far 0.237  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+35:[P4-2WK-023] 775/1000  EM so far 0.230  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+36:[P4-2WK-023] 800/1000  EM so far 0.223  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+37:[P4-2WK-023] 825/1000  EM so far 0.216  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+38:[P4-2WK-023] 850/1000  EM so far 0.209  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+39:[P4-2WK-023] 875/1000  EM so far 0.203  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+40:[P4-2WK-023] 900/1000  EM so far 0.198  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+41:[P4-2WK-023] 925/1000  EM so far 0.192  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+42:[P4-2WK-023] 950/1000  EM so far 0.187  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+43:[P4-2WK-023] 975/1000  EM so far 0.183  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+44:[P4-2WK-023] 1000/1000  EM so far 0.178  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+45:Traceback (most recent call last):
+75:    await self.gen.athrow(typ, value, traceback)
+78:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 39, in __exit__
+80:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+83:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+113:    with map_httpcore_exceptions():
+115:    self.gen.throw(typ, value, traceback)
+116:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+118:httpx2.ReadError
+======== results/P4-2WK-023_qwen3.5-27b__muse-glimmer-30b/debate.log (last 40 lines)
+    raise unhandled from exc.__cause__
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+    result = handler(matched)
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+    raise leaf
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/anyio/_core/_tasks.py", line 327, in _run_coro
+    retval = await self._coro
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 355, in _run_request_post
+    await post_fn()
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 662, in handle_request_async
+    await self._handle_post_request(ctx)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 370, in _handle_post_request
+    async with stream_within_origin(
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/shared/_httpx_utils.py", line 131, in stream_within_origin
+    response = await client.send(request, stream=True, follow_redirects=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1818, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1846, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1881, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1915, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 387, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx2.ReadError
+################ results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b
+total 1272
+drwxr-xr-x 2 spitzer spitzer   4096 Oct 30 02:20 .
+drwxr-xr-x 4 spitzer spitzer   4096 Oct 30 04:10 ..
+-rw-r--r-- 1 spitzer spitzer 444724 Oct 30 04:10 mcp.log
+-rw-r--r-- 1 spitzer spitzer 416375 Oct 30 04:10 vllm_gemma4-26b-a4b.log
+-rw-r--r-- 1 spitzer spitzer 416415 Oct 30 04:10 vllm_gemma4-e4b.log
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/server_logs/mcp.log (error lines)
+7891:INFO:     Waiting for application shutdown.
+7892:INFO:     Application shutdown complete.
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/server_logs/mcp.log (last 40 lines)
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49856 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49856 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49856 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49826 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1833860]
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/server_logs/vllm_gemma4-26b-a4b.log (error lines)
+3904:(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+3905:(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:128] [shutdown] API server: shutdown triggered
+3906:(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+3907:(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+3908:(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+3909:(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+3910:(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+3911:(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+3912:(APIServer pid=1828313) INFO 10-30 04:10:39 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+3913:(APIServer pid=1828313) WARNING 10-30 04:10:39 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+3914:(APIServer pid=1828313) WARNING 10-30 04:10:39 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1830766
+3915:(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+3916:(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+3917:(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:769] [shutdown] MPClient: complete
+3918:(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:153] [shutdown] API server: engine client stopped
+3919:(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+3920:(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+3922:INFO:     Waiting for application shutdown.
+3923:INFO:     Application shutdown complete.
+3924:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/server_logs/vllm_gemma4-26b-a4b.log (last 40 lines)
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1828313) INFO 10-30 04:09:46 [loggers.py:320] Engine 000: Avg prompt throughput: 317.5 tokens/s, Avg generation throughput: 93.9 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.3%, Prefix cache hit rate: 63.1%
+INFO:     127.0.0.1:55340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1828313) INFO 10-30 04:09:56 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 13.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 63.1%
+INFO:     127.0.0.1:59620 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1828313) INFO 10-30 04:10:06 [loggers.py:320] Engine 000: Avg prompt throughput: 51.4 tokens/s, Avg generation throughput: 4.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.3%, Prefix cache hit rate: 63.1%
+INFO:     127.0.0.1:59620 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59620 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1828313) INFO 10-30 04:10:16 [loggers.py:320] Engine 000: Avg prompt throughput: 27.1 tokens/s, Avg generation throughput: 20.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 63.1%
+(APIServer pid=1828313) INFO 10-30 04:10:26 [loggers.py:320] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 63.1%
+(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:128] [shutdown] API server: shutdown triggered
+(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=1830766) INFO 10-30 04:10:39 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=1828313) INFO 10-30 04:10:39 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=1828313) WARNING 10-30 04:10:39 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=1828313) WARNING 10-30 04:10:39 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1830766
+(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=1828313) INFO 10-30 04:10:39 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=1828313) INFO 10-30 04:10:39 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/server_logs/vllm_gemma4-e4b.log (error lines)
+4103:(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+4104:(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+4105:(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+4106:(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+4107:(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:128] [shutdown] API server: shutdown triggered
+4108:(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+4109:(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+4110:(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+4111:(APIServer pid=1828310) INFO 10-30 04:10:40 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+4112:(APIServer pid=1828310) WARNING 10-30 04:10:40 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+4113:(APIServer pid=1828310) WARNING 10-30 04:10:40 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1832690
+4114:(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+4115:(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+4116:(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:769] [shutdown] MPClient: complete
+4117:(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:153] [shutdown] API server: engine client stopped
+4118:(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+4119:(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+4121:INFO:     Waiting for application shutdown.
+4122:INFO:     Application shutdown complete.
+4123:/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/server_logs/vllm_gemma4-e4b.log (last 40 lines)
+(APIServer pid=1828310) INFO 10-30 04:10:34 [loggers.py:320] Engine 000: Avg prompt throughput: 4788.0 tokens/s, Avg generation throughput: 1281.5 tokens/s, Running: 146 reqs, Waiting: 0 reqs, GPU KV cache usage: 3.6%, Prefix cache hit rate: 64.0%
+INFO:     127.0.0.1:52532 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52806 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53636 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52686 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52938 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38006 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38016 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52904 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53830 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54034 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53930 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37996 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53642 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53592 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54046 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54056 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53732 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1409] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1558] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1589] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=1832690) INFO 10-30 04:10:40 [core.py:1422] [shutdown] EngineCore: exiting busy loop
+(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:128] [shutdown] API server: shutdown triggered
+(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:144] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:762] [shutdown] MPClient: start timeout=0s
+(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:764] [shutdown] MPClient: stopping engine manager
+(APIServer pid=1828310) INFO 10-30 04:10:40 [utils.py:638] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=1828310) WARNING 10-30 04:10:40 [utils.py:658] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=1828310) WARNING 10-30 04:10:40 [utils.py:663] [shutdown] Process manager: force killing remaining process EngineCore pid 1832690
+(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:766] [shutdown] MPClient: engine manager stopped
+(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:767] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=1828310) INFO 10-30 04:10:40 [core_client.py:769] [shutdown] MPClient: complete
+(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:153] [shutdown] API server: engine client stopped
+(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:156] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=1828310) INFO 10-30 04:10:40 [launcher.py:178] [shutdown] API server: shutting down FastAPI HTTP server
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+/opt/cray/pe/python/3.11.7/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/debate.log (error lines)
+38:[P4-2WK-054] 850/1000  EM so far 0.641  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+39:[P4-2WK-054] 875/1000  EM so far 0.623  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+40:[P4-2WK-054] 900/1000  EM so far 0.606  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+41:[P4-2WK-054] 925/1000  EM so far 0.589  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+42:[P4-2WK-054] 950/1000  EM so far 0.574  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+43:[P4-2WK-054] 975/1000  EM so far 0.559  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+44:[P4-2WK-054] 1000/1000  EM so far 0.545  last: src=error rounds=0 0.0s  ERROR=RuntimeError
+45:Traceback (most recent call last):
+75:    await self.gen.athrow(typ, value, traceback)
+78:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 39, in __exit__
+80:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+83:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+113:    with map_httpcore_exceptions():
+115:    self.gen.throw(typ, value, traceback)
+116:  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+118:httpx2.ReadError
+======== results/P4-2WK-054_gemma4-e4b__gemma4-26b-a4b/debate.log (last 40 lines)
+    raise unhandled from exc.__cause__
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/exceptiongroup/_catch.py", line 65, in handle_exception
+    result = handler(matched)
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/fastmcp/utilities/exceptions.py", line 63, in _exception_handler
+    raise leaf
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/anyio/_core/_tasks.py", line 327, in _run_coro
+    retval = await self._coro
+             ^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 355, in _run_request_post
+    await post_fn()
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 662, in handle_request_async
+    await self._handle_post_request(ctx)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/client/streamable_http.py", line 370, in _handle_post_request
+    async with stream_within_origin(
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/mcp/shared/_httpx_utils.py", line 131, in stream_within_origin
+    response = await client.send(request, stream=True, follow_redirects=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1818, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1846, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1881, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_client.py", line 1915, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 387, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/opt/cray/pe/python/3.11.7/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/path/to/workspace/venvs/vllm-p3/lib/python3.11/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx2.ReadError
